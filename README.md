@@ -2,7 +2,7 @@
 
 # 1-Introducción
 Este es el documento de diseño de juego de “Cursed Trinity”. Un juego para PC que pretende explorar las posibilidades de una modalidad cooperativa para un juego de aventura y mazmorras usando funcionalidades de conexión online.
-# Concepto del juego
+## Concepto del juego
 “Cursed Trinity” es un videojuego en el que controlamos a tres héroes cada uno portador de un arma maldita. La Espada Renegada, el Arco Corrupto y el Tomo Oscuro. Todos ellos aún con sus particularidades, deberán abrirse paso a través de la mazmorra del malvado Furciferus hasta derrotarlo.
 Características principales
 
@@ -11,19 +11,19 @@ El juego se basa en los siguientes puntos:
 - Cooperación: para fomentar el trabajo colaborativo entre los jugadores se implementarán puzzles que requieran de las diferentes habilidades de los personajes, por lo que será imposible avanzar en solitario.
 - Nostalgia: el juego emulará tanto estéticamente como jugablemente juegos de acción y aventura más clásicos como los The Legend of Zelda o Terranigma.
 - Duradero: debe ser longevo y capaz de insertar nuevas mazmorras, puzzles y enemigos de forma sencilla. 
-# Género
+## Género
 Se ha establecido que Cursed Trinity es una unión de diferentes géneros. A continuación se enumeran y se presentan los motivos:
 
 - Dungeon crawler: la característica fundamental de los dungeon crawler es la exploración de mazmorras. A partir de ahí el género puede tomar diversos caminos o coger elementos de otros géneros como los roguelike (Pokémon Mystery Dungeon) o los RPG (Etrian Odyssey). En nuestro caso el combate estará más orientado a la acción y sin una progresión de recogida de objetos.
 
 - Aventura: es un género en el que entran todos los juegos cargados de misiones, acción, puzzles y sobretodo una historia que contar. Algún ejemplo es el antiguo The Legend Of Zelda (Nintendo) o más nuevo como Uncharted (Naughty Dog).
 
-# Propósito y público objetivo
+## Propósito y público objetivo
 Los motivos para la realización de Cursed Trinity son dos. Por un lado para desarrollar un tipo de juego que cada vez está un poco más olvidado y por el otro lado para crear una experiencia colaborativa que permita a los jugadores divertirse juntos sin tener que competir entre ellos como es tan habitual en la industria.
 
 Cursed Trinity está dirigido a un amplio abanico de edades. Al ser un juego cooperativo (con la posibilidad de jugarlo en solitario) está pensado para ser jugado por varias personas a la vez, compartiendo una experiencia que para algunos será nostálgica y para otros una primera experiencia en el género por lo que se tratará de conseguir que ambos extremos puedan disfrutar por igual de la experiencia. La historia es sencilla para permitir a los jugadores jugar de forma ocasional. 
 
-# Jugabilidad
+## Jugabilidad
 Cada planta de la mazmorra está compuesta por diversas habitaciones que los héroes tendrán que visitar para encontrar las tres Gemas de Éter con las que abrirán la puerta a la siguiente planta. Para ello nos valdremos de los siguientes elementos:
 
 - Movilidad: los personajes se desplazaran de habitación a habitación para poder conseguir las Gemas de Éter y pasar a la siguiente planta.
@@ -31,15 +31,15 @@ Armas:Cada uno de los héroes presenta un arma diferente que puede ser utilizada
 - Puzzles: los puzzles podrán ser de distintos tipos, pero estarán siempre enfocados a abrir caminos o desbloquear zonas para seguir avanzando. Para ello se aprovecharán por un lado las mecánicas de movimiento estándar de los personajes y por otro las habilidades únicas de cada uno.
 - Combate: se contará con dos estilos de combate básicos. Por un lado el combate cuerpo a cuerpo del héroe que usa la espada y por el otro el combate a distancia de los héroes que usan el arco y el tomo.
 
-# Estilo Visual
+## Estilo Visual
 Cursed Trinity tendrá un apartado visual bastante sencillo usando simpáticos sprites de estética pixel art tanto para personajes y enemigos como mecanismos y escenarios. 
 
-# Alcance
+## Alcance
 El objetivo principal es desarrollar un juego sólido al que podamos introducir nuevas “dungeons”. En principio se desarrollará un contenido básico que próximamente será ampliado en las siguientes actualizaciones del juego.
 
 # 2-Mecánicas de juego
 En este apartado se profundizará en las diferentes mecánicas que componen a Cursed Trinity ahondando en los diversos fundamentos de su jugabilidad y explicando el rango de acción de los jugadores.
-# Jugabilidad
+## Jugabilidad
 - Movimiento: los personajes podrán moverse por todo el escenario con WASD para progresar con la aventura, pero no poseen más mecánicas de movimiento como puedan ser esquivar, rodar o saltar.
 
 - Puzzles: los diferentes caminos para avanzar estarán cerrados temporalmente hasta que los jugadores resuelvan algún tipo de puzzle que por lo general se centrarán en activar mecanismos aprovechándose tanto de su entorno como de sus habilidades únicas.
@@ -55,7 +55,7 @@ En este apartado se profundizará en las diferentes mecánicas que componen a Cu
   - Arco: El arco golpea con una flecha a los enemigos a distancia. También puede activar interruptores lejanos a donde no llegue la espada.
   - Tomo: El tomo es capaz de hacer magia con la que podrá lanzar bolas de energía a los enemigos así como abrir paso por las paredes agrietadas.
   
-# Flujo de juego
+## Flujo de juego
 A lo largo de esta sección se detalla el transcurso de una partida típica de Cursed Trinity. Se comentarán los pasos que han de seguir los jugadores desde el inicio del juego hasta completar un piso de la mazmorra. Poco a poco vamos desgranando el funcionamiento exacto del juego, en esta sección describimos las mecánicas. Más adelante se definirá el contenido de cada pantalla.
 
 El jugador inicia Cursed Trinity con una pequeña cutscene en la que se explicará brevemente la trama del juego:
@@ -77,14 +77,14 @@ Cada parte de la mazmorra estará dividida en 4 plantas, 3 normales y una últim
 
 Cuando lo desee, el Jugador podrá regresar a pantallas anteriores o al Menú Principal . Más adelante se mostrarán todas la posibilidades de flujo entre pantallas.  
 
-# Personajes
+## Personajes
 En esta sección se van a enumerar y describir los diferentes personajes que aparecerán en el juego Cursed Trinity así como sus habilidades y comportamiento.
 
  - Blade
-    -Descripción: Es uno de los protagonistas del juego. Era un guerrero que compró una espada para poder ser el más poderoso de todos los guerreros, pero esa arma le costó la maldición que ahora recae sobre él. Es un hombre fuerte, arrogante y orgulloso de sí mismo.
-    -Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
-    -Ataque de espada: ataque cuerpo a cuerpo que resta 1 punto de salud a los enemigos. Para que surta efecto la espada debe alcanzar al objetivo en el ataque.
-  -Maldición: el arma copia la peor faceta de su usuario, en este caso el orgullo de Blade lo que provoca que tras cada golpe aumente la probabilidad de que la espada se niegue a obedecer al espadachín.
+    - Descripción: Es uno de los protagonistas del juego. Era un guerrero que compró una espada para poder ser el más poderoso de todos los guerreros, pero esa arma le costó la maldición que ahora recae sobre él. Es un hombre fuerte, arrogante y orgulloso de sí mismo.
+    - Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
+    - Ataque de espada: ataque cuerpo a cuerpo que resta 1 punto de salud a los enemigos. Para que surta efecto la espada debe alcanzar al objetivo en el ataque.
+  - Maldición: el arma copia la peor faceta de su usuario, en este caso el orgullo de Blade lo que provoca que tras cada golpe aumente la probabilidad de que la espada se niegue a obedecer al espadachín.
  - Arrow
     - Descripción: Es uno de los protagonistas del juego. Un cazarrecompensas que un día encontró un extraño arco entre las posesiones de uno de los criminales que capturó, aunque al principio le pareció una suerte haberlo encontrado luego descubriría la maldición que le acompaña. Es un hombre despistado, divertido y muy sociable.
     - Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
@@ -115,8 +115,8 @@ En esta sección se van a enumerar y describir los diferentes personajes que apa
     - Puntos de salud: 20
     - Ataque: cuenta con varias manos que actúan de forma independiente. Unas pueden golpear físicamente a su adversario restándole 3 puntos de vida y otras pueden lanzar rayos de llamas azules que restan otros 3 puntos de vida. 
 
-# Movimiento y físicas
-# Interacción entre elementos
+## Movimiento y físicas
+### Interacción entre elementos
 
 Cursed Trinity se desarrolla sobre un plano 2D y tanto los enemigos como personajes pueden desplazarse por él. El escenario contará con diferentes elementos que funcionarán como obstáculos. Algunos de ellos podrán romperse, como las paredes agrietadas que desaparecerán con el hechizo de Cauldron. 
 
@@ -137,7 +137,7 @@ Las colisiones que se producirán:
 - Personaje - Items (cuando un jugador se acerque a una poción de salud este la recogerá cuando choque con ella)
  
 
-# Controles
+## Controles
 
 - Movimiento: teclas W, A, S, D.
 - Apuntar: movimiento del ratón.
@@ -147,7 +147,7 @@ Las colisiones que se producirán:
 # 3-Interfaz
 En esta sección se especificará con detalle cada una de las pantallas que componen “Cursed Trinity”. Además, se indicarán las transiciones entre ellas así como la utilidad de cada elemento de la GUI (Graphical User Interface). Las imágenes adjuntas son bocetos que ilustran los componentes que debe contener cada pantalla, no obstante, los artistas podrán (y deberán) hacer cambios en la apariencia y disposición de los elementos si así lo consideran oportuno.  
  
-# Diagrama de flujo
+## Diagrama de flujo
 En este diagrama de estados se muestran todas las pantallas que se podrán ver a lo largo del juego y cómo se llega a cada una de ellas.
 
  - Menú principal
@@ -166,10 +166,10 @@ En este diagrama de estados se muestran todas las pantallas que se podrán ver a
  #  4-Arte
 Uno de los puntos en los que se sustenta Cursed Trinity es la nostalgia por lo que se apostará por usar una estética 2D en pixel art. La trama contiene unos tintes bastante oscuros, pero el objetivo del juego no deja de ser que los jugadores colaboren entre ellos y se diviertan por lo que el arte tratará de no ser demasiado oscuro ni demasiado alegre, creando un balance para que ambas ideas puedan convivir. 
 
-# Arte 2D
+## Arte 2D
 Las imágenes usadas están en formato .png por su alta calidad y la facilidad de ser integradas por las transparencias de sus fondos. Además, se guardarán siempre los archivos en formato de edición originales.
 
-# Sprites
+## Sprites
   - Arrow (animación estática, de movimiento, ataque, recibir daño y muerte)
   - Blade (animación estática, de movimiento, ataque, recibir daño y muerte)
   - Cauldron (animación estática, de movimiento, ataque, recibir daño y muerte)
