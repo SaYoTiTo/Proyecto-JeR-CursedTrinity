@@ -81,10 +81,10 @@ Cuando lo desee, el Jugador podrá regresar a pantallas anteriores o al Menú Pr
 En esta sección se van a enumerar y describir los diferentes personajes que aparecerán en el juego Cursed Trinity así como sus habilidades y comportamiento.
 
  - Blade
-Descripción: Es uno de los protagonistas del juego. Era un guerrero que compró una espada para poder ser el más poderoso de todos los guerreros, pero esa arma le costó la maldición que ahora recae sobre él. Es un hombre fuerte, arrogante y orgulloso de sí mismo.
-Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
-Ataque de espada: ataque cuerpo a cuerpo que resta 1 punto de salud a los enemigos. Para que surta efecto la espada debe alcanzar al objetivo en el ataque.
-Maldición: el arma copia la peor faceta de su usuario, en este caso el orgullo de Blade lo que provoca que tras cada golpe aumente la probabilidad de que la espada se niegue a obedecer al espadachín.
+--Descripción: Es uno de los protagonistas del juego. Era un guerrero que compró una espada para poder ser el más poderoso de todos los guerreros, pero esa arma le costó la maldición que ahora recae sobre él. Es un hombre fuerte, arrogante y orgulloso de sí mismo.
+--Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
+--Ataque de espada: ataque cuerpo a cuerpo que resta 1 punto de salud a los enemigos. Para que surta efecto la espada debe alcanzar al objetivo en el ataque.
+--Maldición: el arma copia la peor faceta de su usuario, en este caso el orgullo de Blade lo que provoca que tras cada golpe aumente la probabilidad de que la espada se niegue a obedecer al espadachín.
  - Arrow
 Descripción: Es uno de los protagonistas del juego. Un cazarrecompensas que un día encontró un extraño arco entre las posesiones de uno de los criminales que capturó, aunque al principio le pareció una suerte haberlo encontrado luego descubriría la maldición que le acompaña. Es un hombre despistado, divertido y muy sociable.
 Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
