@@ -81,39 +81,39 @@ Cuando lo desee, el Jugador podrá regresar a pantallas anteriores o al Menú Pr
 En esta sección se van a enumerar y describir los diferentes personajes que aparecerán en el juego Cursed Trinity así como sus habilidades y comportamiento.
 
  - Blade
---Descripción: Es uno de los protagonistas del juego. Era un guerrero que compró una espada para poder ser el más poderoso de todos los guerreros, pero esa arma le costó la maldición que ahora recae sobre él. Es un hombre fuerte, arrogante y orgulloso de sí mismo.
---Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
---Ataque de espada: ataque cuerpo a cuerpo que resta 1 punto de salud a los enemigos. Para que surta efecto la espada debe alcanzar al objetivo en el ataque.
---Maldición: el arma copia la peor faceta de su usuario, en este caso el orgullo de Blade lo que provoca que tras cada golpe aumente la probabilidad de que la espada se niegue a obedecer al espadachín.
+    -Descripción: Es uno de los protagonistas del juego. Era un guerrero que compró una espada para poder ser el más poderoso de todos los guerreros, pero esa arma le costó la maldición que ahora recae sobre él. Es un hombre fuerte, arrogante y orgulloso de sí mismo.
+    -Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
+    -Ataque de espada: ataque cuerpo a cuerpo que resta 1 punto de salud a los enemigos. Para que surta efecto la espada debe alcanzar al objetivo en el ataque.
+  -Maldición: el arma copia la peor faceta de su usuario, en este caso el orgullo de Blade lo que provoca que tras cada golpe aumente la probabilidad de que la espada se niegue a obedecer al espadachín.
  - Arrow
-Descripción: Es uno de los protagonistas del juego. Un cazarrecompensas que un día encontró un extraño arco entre las posesiones de uno de los criminales que capturó, aunque al principio le pareció una suerte haberlo encontrado luego descubriría la maldición que le acompaña. Es un hombre despistado, divertido y muy sociable.
-Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
-Ataque de arco: ataque a distancia que resta 1 punto de salud a los enemigos. Para que surja efecto la flecha debe alcanzar al objetivo en el ataque.
-Maldición: cada flecha contiene parte de los recuerdos de Arrow. Con lo cual para evitar perder la memoria por completo debe recoger las flechas que dispara. Cuenta con 4 de estas flechas.
+    - Descripción: Es uno de los protagonistas del juego. Un cazarrecompensas que un día encontró un extraño arco entre las posesiones de uno de los criminales que capturó, aunque al principio le pareció una suerte haberlo encontrado luego descubriría la maldición que le acompaña. Es un hombre despistado, divertido y muy sociable.
+    - Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
+    - Ataque de arco: ataque a distancia que resta 1 punto de salud a los enemigos. Para que surja efecto la flecha debe alcanzar al objetivo en el ataque.
+    - Maldición: cada flecha contiene parte de los recuerdos de Arrow. Con lo cual para evitar perder la memoria por completo debe recoger las flechas que dispara. Cuenta con 4 de estas flechas.
  - Cauldron
-Descripción: Es uno de los protagonistas del juego. Ser arcano que trató de usar el poder del tomo oscuro para conseguir la belleza absoluta, lo que no sabía es que la maldición que acompañaba al libro solo le dejaría más lejos de su objetivo.Ser despiadado y sarcástico, pero capaz de colaborar con otros para cumplir sus objetivos.
-Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
-Hechizo: ataque a distancia que resta 1 punto de salud al enemigo, pero que tras impactar hace una explosion a su alrededor que quita otro punto de salud.
-Maldición: abusar del tomo tiene efectos adversos para su usuario. Tras lanzar tres hechizos seguidos el siguiente tendrá más potencia aún (restando 1 punto de salud extra al enemigo) pero a cambio el propio Cauldron también pierde 1 punto de salud.
+    - Descripción: Es uno de los protagonistas del juego. Ser arcano que trató de usar el poder del tomo oscuro para conseguir la belleza absoluta, lo que no sabía es que la maldición que acompañaba al libro solo le dejaría más lejos de su objetivo.Ser despiadado y sarcástico, pero capaz de colaborar con otros para cumplir sus objetivos.
+    - Puntos de salud: 5 (se pueden recuperar al derrotar enemigos).
+    - Hechizo: ataque a distancia que resta 1 punto de salud al enemigo, pero que tras impactar hace una explosion a su alrededor que quita otro punto de salud.
+    - Maldición: abusar del tomo tiene efectos adversos para su usuario. Tras lanzar tres hechizos seguidos el siguiente tendrá más potencia aún (restando 1 punto de salud extra al enemigo) pero a cambio el propio Cauldron también pierde 1 punto de salud.
 
  - Araña de Cristal
-Descripción: Arañas normales corrompidas por el poder de la Muerte para combatir a su lado. Es el enemigo más común del juego.
-Puntos de salud: 2
-Ataque: corre hacia el héroe más cercano y al chocar con él le quita 1 punto de salud.
+    - Descripción: Arañas normales corrompidas por el poder de la Muerte para combatir a su lado. Es el enemigo más común del juego.
+    - Puntos de salud: 2
+    - Ataque: corre hacia el héroe más cercano y al chocar con él le quita 1 punto de salud.
 
  - Vigilante Artificial
-Descripción: Son la primera línea de defensa de la Muerte. Son débiles y sin conciencia ya que son controlados por la muerte misma. 
-Puntos de salud: 5
-Ataque: vuelan hacia el héroe más alejado y al llegar allí explotan haciendo 2 puntos de salud a los enemigos adyacentes.
+    - Descripción: Son la primera línea de defensa de la Muerte. Son débiles y sin conciencia ya que son controlados por la muerte misma. 
+    - Puntos de salud: 5
+    - Ataque: vuelan hacia el héroe más alejado y al llegar allí explotan haciendo 2 puntos de salud a los enemigos adyacentes.
 
  - Diablillo Llorón
-Descripción: Pequeños seres del inframundo que viven en eterno dolor, llenando todo de lágrimas a su paso mientras son controlados como títeres por la propia Muerte.
-Puntos de salud: 7
-Ataque: ataca a distancia con sus llantos y lamentos restando 2 puntos de salud a aquellos que alcanzan.
+    - Descripción: Pequeños seres del inframundo que viven en eterno dolor, llenando todo de lágrimas a su paso mientras son controlados como títeres por la propia Muerte.
+    - Puntos de salud: 7
+    - Ataque: ataca a distancia con sus llantos y lamentos restando 2 puntos de salud a aquellos que alcanzan.
  - La Muerte
-Descripción: Es la encargada de recoger las almas de los fallecidos. Tras preguntarle a los héroes cuál era su deseo, estos le respondieron con respuestas egoístas y superficiales por lo que ella les castigó con una maldición.
-Puntos de salud: 20
-Ataque: cuenta con varias manos que actúan de forma independiente. Unas pueden golpear físicamente a su adversario restándole 3 puntos de vida y otras pueden lanzar rayos de llamas azules que restan otros 3 puntos de vida. 
+    - Descripción: Es la encargada de recoger las almas de los fallecidos. Tras preguntarle a los héroes cuál era su deseo, estos le respondieron con respuestas egoístas y superficiales por lo que ella les castigó con una maldición.
+    - Puntos de salud: 20
+    - Ataque: cuenta con varias manos que actúan de forma independiente. Unas pueden golpear físicamente a su adversario restándole 3 puntos de vida y otras pueden lanzar rayos de llamas azules que restan otros 3 puntos de vida. 
 
 # Movimiento y físicas
 # Interacción entre elementos
@@ -139,7 +139,68 @@ Las colisiones que se producirán:
 
 # Controles
 
-Movimiento: teclas W, A, S, D.
-Apuntar: movimiento del ratón.
-Atacar: Click izquierdo. 
-Curar compañero: estando a su lado pulsar la barra espaciadora.
+- Movimiento: teclas W, A, S, D.
+- Apuntar: movimiento del ratón.
+- Atacar: Click izquierdo. 
+- Curar compañero: estando a su lado pulsar la barra espaciadora.
+
+# 3-Interfaz
+En esta sección se especificará con detalle cada una de las pantallas que componen “Cursed Trinity”. Además, se indicarán las transiciones entre ellas así como la utilidad de cada elemento de la GUI (Graphical User Interface). Las imágenes adjuntas son bocetos que ilustran los componentes que debe contener cada pantalla, no obstante, los artistas podrán (y deberán) hacer cambios en la apariencia y disposición de los elementos si así lo consideran oportuno.  
+ 
+# Diagrama de flujo
+En este diagrama de estados se muestran todas las pantallas que se podrán ver a lo largo del juego y cómo se llega a cada una de ellas.
+
+ - Menú principal
+    - Botón jugar: Al pulsarlo lleva a la pantalla de Selección de Partida.
+    - Botón salir: al pulsarlo nos lleva de vuelta al Sistema Operativo.
+
+  - Selección de Partida
+    - Botón Crear Sesión: Al pulsarlo lleva a la pantalla de Selección de personaje creando nuestra propia partida.
+    - Botón Unirse Sesión: tras poner el código en el recuadro y pulsarlo nos lleva a la pantalla de Selección de personaje 
+ 
+  - Selección de Personaje
+    - Botón Empezar: Al pulsarlo entrarás directamente en la mazmorra.
+    - Botón Volver: Al pulsarlo volverás a la pantalla de Selección de Partida
+    
+    
+ #  4-Arte
+Uno de los puntos en los que se sustenta Cursed Trinity es la nostalgia por lo que se apostará por usar una estética 2D en pixel art. La trama contiene unos tintes bastante oscuros, pero el objetivo del juego no deja de ser que los jugadores colaboren entre ellos y se diviertan por lo que el arte tratará de no ser demasiado oscuro ni demasiado alegre, creando un balance para que ambas ideas puedan convivir. 
+
+# Arte 2D
+Las imágenes usadas están en formato .png por su alta calidad y la facilidad de ser integradas por las transparencias de sus fondos. Además, se guardarán siempre los archivos en formato de edición originales.
+
+# Sprites
+  - Arrow (animación estática, de movimiento, ataque, recibir daño y muerte)
+  - Blade (animación estática, de movimiento, ataque, recibir daño y muerte)
+  - Cauldron (animación estática, de movimiento, ataque, recibir daño y muerte)
+  - Araña de cristal (animación de movimiento)
+  - Vigilante artificial (animación de movimiento y ataque)
+  - Diablillo llorón (animación de movimiento y ataque)
+  - La Muerte (animación estática y de ataques)
+  - Palancas (dos posiciones)
+  - Tiles
+  - Suelo
+  - Paredes
+  - Puertas
+  - Otros
+  
+# Audio
+## Música
+  - Menú principal: música tranquila pero alentadora que anime al jugador a entrar en una partida rápidamente.
+  - Juego: una melodía mucho más enérgica y épica pero sin excederse para no resultar cargante.
+  - Boss final: un tono mucho más épico y tenso que el anterior, pero con puntos más suaves para que no sea demasiado dramática.
+  - Victoria: música triunfal y heróica que sirva como recompensa en sí misma al jugador.
+  - Derrota: triste y calmada para que los jugadores puedan reflexionar sobre sus errores en la anterior partida y reintentarlo.
+## Efectos
+  - Correr: sonido de pisadas rápidas
+  - Impacto de espada
+  - Impacto de flecha
+  - Impacto de magia
+  - Efectos de Araña de Cristal: sonidos del movimiento de sus patas
+  - Efectos de Vigilante Artificial: sonido de su movimiento, de su cuenta atrás y explosión
+  - Efectos del Diablillo Llorón: sonido de su movimiento y de sus llantos.
+  - Efectos de la Muerte: sonido de los ataques del jefe.
+  - Efecto de palanca
+  - Efecto de pérdida de salud
+
+
