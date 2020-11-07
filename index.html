@@ -174,7 +174,7 @@ var velocityFromRotation = Phaser.Physics.Arcade.ArcadePhysics.prototype.velocit
                 frameWidth: 39,
                 frameHeight: 39,
             });
-            this.load.image('bg', 'https://cdn.glitch.com/59aa1c5f-c16d-41a1-bfd2-09072e84a538%2Fbg.png?1551136995353');
+            this.load.image('bg', 'assets/CuartoMazmorra.png');
             
             this.load.image('ground', 'assets/platform.png');
         
@@ -210,7 +210,7 @@ var velocityFromRotation = Phaser.Physics.Arcade.ArcadePhysics.prototype.velocit
             this.input.on('pointermove', f, this);
             
             //The walls
-            platforms = this.physics.add.staticGroup();
+            /*platforms = this.physics.add.staticGroup();
             
             platforms.create(40, 56, 'ground').setScale(2).refreshBody();
 
@@ -218,7 +218,7 @@ var velocityFromRotation = Phaser.Physics.Arcade.ArcadePhysics.prototype.velocit
             platforms.create(50, 250, 'ground');
             platforms.create(75, 220, 'ground');
             
-            this.physics.add.collider(this.hero, platforms);
+            this.physics.add.collider(this.hero, platforms);*/
             
             // The state machine managing the hero
             this.stateMachine = new StateMachine('idle', {
