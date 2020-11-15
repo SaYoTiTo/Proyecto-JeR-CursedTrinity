@@ -240,9 +240,10 @@ var game = new Phaser.Game(config);
                 frameHeight: 320,
             });
             this.load.spritesheet('llamas', 'assets/LlamaSpritesheet.png',{
-                frameWidth: 53,
-                frameHeight: 21,
+                frameWidth: 22,
+                frameHeight: 12,
             });
+            
             //this.load.image('bg', 'assets/CuartoMazmorra.png');
             
             this.load.image('colliderH', 'assets/ColliderMuroHorizontal.png'); 
@@ -270,7 +271,7 @@ var game = new Phaser.Game(config);
                  right2:Phaser.Input.Keyboard.KeyCodes.L,
                  space2:Phaser.Input.Keyboard.KeyCodes.P});           
             
-            
+            /*
             //The walls
             platforms = this.physics.add.staticGroup();
             
@@ -292,7 +293,7 @@ var game = new Phaser.Game(config);
             platforms.create(388, 81, 'colliderV');
             platforms.create(388, 218, 'colliderV');
             platforms.create(388, 228, 'colliderV');
-            
+            */
             //Darkness
             this.shadows = this.add.rectangle(210, 160, 4200, 3200, 0xFFFFFF); //0x000000
             
@@ -307,7 +308,6 @@ var game = new Phaser.Game(config);
             // The movable bow character
             this.heroA = this.physics.add.sprite(200, 150, 'hero', 0);
             this.heroA.direction = 'down';
-            this.heroA.setImmovable(true);
             this.heroA.setCollideWorldBounds(true);
             
             //The arrows
@@ -335,7 +335,7 @@ var game = new Phaser.Game(config);
             //The top in view
             this.top = this.physics.add.sprite(210, 160, 'top', 0);
             
-            /*
+            
             //The walls
             platforms = this.physics.add.staticGroup();
             
@@ -357,7 +357,7 @@ var game = new Phaser.Game(config);
             platforms.create(388, 81, 'colliderV');
             platforms.create(388, 218, 'colliderV');
             platforms.create(388, 228, 'colliderV');
-            */
+            
             this.cameras.main.setBounds(0,0,4200,3200);
             
             
@@ -372,7 +372,6 @@ var game = new Phaser.Game(config);
             this.physics.add.collider(this.heroA, platforms);
             this.physics.add.collider(this.heroC, platforms);
             this.physics.add.collider(this.heroA, this.heroC);
-            //this.physics.add.collider(this.flechas, platforms);
             
             
             // The state machine managing the heroA
@@ -483,12 +482,10 @@ var game = new Phaser.Game(config);
     
         var f = function(pointer) {
             var angle = Phaser.Math.RAD_TO_DEG * Phaser.Math.Angle.Between(this.bow.x, this.bow.y, pointer.x + this.cameras.main.worldView.x, pointer.y + this.cameras.main.worldView.y);
-            //var angle = Phaser.Math.Angle.BetweenPoints(this.bow, pointer);
             this.bow.setAngle(angle);
         }
         var f2 = function(pointer) {
             var angle = Phaser.Math.RAD_TO_DEG * Phaser.Math.Angle.Between(this.book.x, this.book.y, pointer.x + this.cameras.main.worldView.x, pointer.y + this.cameras.main.worldView.y);
-            //var angle = Phaser.Math.Angle.BetweenPoints(this.bow, pointer);
             this.book.setAngle(angle);
         }
         
@@ -537,9 +534,23 @@ var game = new Phaser.Game(config);
             this.flechas.size++;
         }
     
+        var posX = 0;
+        var posY = 0;
+    
         function cambioCam(heroA, cameras){
-            if(heroA.body.position.x > 420){
-                cameras.main.setBounds(420,0,4200,3200);
+            if(heroA.body.position.x > 420 + posX){
+                posX = posX + 420;
+                cameras.main.setBounds(posX,posY,420,320);
+            }else if(heroA.body.position.x < posX){
+                posX = posX - 420;
+                cameras.main.setBounds(posX,posY,420,320);
+            }
+            if(heroA.body.position.y > 320 + posY){
+                posY = posY + 320;
+                cameras.main.setBounds(posX,posY,420,320);
+            }else if(heroA.body.position.y < posY){
+                posY = posY - 320;
+                cameras.main.setBounds(posX,posY,420,320);
             }
         }
 
