@@ -208,6 +208,8 @@ Las imágenes usadas están en formato .png por su alta calidad y la facilidad d
 
 Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el trabajo del proyecto entrando de lleno en la fase 2. En esta sección añadiremos las diferentes actualizaciones que se han llevado a cabo a lo largo de esta fase, además de todas las pantallas que se hayan diseñado e insertado en el juego como un pequeño diagrama de navegación para mostrar el transcurso de las pantallas en este primera beta offline del juego.
 
+# Pantallas diseñadas
+
 ##  - Pantalla Menú Principal:
 Esta sería la primera pantalla que se vería al empezar el juego. En ella veremos el título del juego con su botón Jugar  que nos llevará directamente a la Pantalla de Seleccion de Personaje. 
 
