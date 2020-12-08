@@ -204,3 +204,21 @@ Las imágenes usadas están en formato .png por su alta calidad y la facilidad d
   - Efecto de pérdida de salud
 
 
+# FASE 2
+
+Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el trabajo del proyecto entrando de lleno en la fase 2. En esta sección añadiremos las diferentes actualizaciones que se han llevado a cabo a lo largo de esta fase, además de todas las pantallas que se hayan diseñado e insertado en el juego como un pequeño diagrama de navegación para mostrar el transcurso de las pantallas en este primera beta offline del juego.
+
+##  - Pantalla Menú Principal:
+Esta sería la primera pantalla que se vería al empezar el juego. En ella veremos el título del juego con su botón Jugar  que nos llevará directamente a la Pantalla de Seleccion de Personaje. 
+
+ ## - Pantalla Selección de Personaje:
+ En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Debido a que el juego por ahora es offline, solo se podrá jugar con dos de los personajes del juego: Arrow y Cauldron. Blade estará disponible en la siguiente fase ya que el grupo decidió que era más óptimo dejar solo dos jugadores en vez de tres en esta segunda fase. En esta pantalla, el jugador tendrá que pulsar uno de los personajes y pasará a la pantalla del tutorial.
+
+ ## - Pantalla Tutorial: 
+ En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
+
+ ## - Pantallas In Game:
+  - Sala estandar:
+  - Sala con puzzle
+  - Sala del Cofre
+  - Sala del Boss Final
