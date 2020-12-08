@@ -55,16 +55,67 @@ export default class PreloadScene extends Phaser.Scene{
     frameWidth: 53,
         frameHeight: 21,
     });
-    //this.load.image('bg', 'assets/CuartoMazmorra.png');
+    this.load.spritesheet('palanca', 'assets/Palanca.png',{
+        frameWidth: 22,
+        frameHeight: 18,
+    });
+    this.load.spritesheet('pasarela', 'assets/Pasarela.png',{
+        frameWidth: 41,
+        frameHeight: 206,
+    });
+    this.load.spritesheet('lockV', 'assets/LockdoorsV.png',{
+        frameWidth: 41,
+        frameHeight: 81,
+    });
+    this.load.spritesheet('lockH', 'assets/LockdoorsH.png',{
+        frameWidth: 81,
+        frameHeight: 41,
+    });
+    this.load.spritesheet('chest', 'assets/Cofre.png',{
+        frameWidth: 34,
+        frameHeight: 32,
+    });
+    this.load.spritesheet('explosion', 'assets/ExplosionPequena.png',{
+        frameWidth: 12,
+        frameHeight: 12,
+    });
+    this.load.spritesheet('bigExplosion', 'assets/ExplosionGrande.png',{
+        frameWidth: 22,
+        frameHeight: 22,
+    });
+    
     this.load.image('colliderH', 'assets/ColliderMuroHorizontal.png'); 
     this.load.image('colliderV', 'assets/ColliderMuroVertical.png');
+    this.load.image('colliderAbismo', 'assets/ColliderAbsimol.png');
+    this.load.image('colliderRemovible', 'assets/ColliderRemovible.png');
+    this.load.image('spiderWeb', 'assets/Telaraña.png');
     this.load.image('top', 'assets/Darkness.png');
     this.load.image('flechas', 'assets/Flecha.png');           
-    this.load.image('diamonds', 'assets/bomb.png');
+    this.load.image('niebla', 'assets/Niebla.jpg');
     
     //Barra de carga
     this.load.on('progress', this.updateBar, {newGraphics:this.newGraphics,loadingText:loadingText});
     this.load.on('complete', this.complete, {scene: this.scene});
+	    
+    //Sounds and OST 
+    this.load.audio('dungeonMusic', [
+        'assets/D.wav'
+    ]);
+    this.load.audio('disparoFlecha', [
+        'assets/Disparo_Flecha.wav'
+    ]);
+    this.load.audio('impactoFlecha', [
+        'assets/Golpe_Flecha.wav'
+    ]);
+    this.load.audio('disparoFuego', [
+        'assets/Disparo_Bola_Fuego.wav'
+    ]);
+    this.load.audio('impactoFuego', [
+        'assets/Golpe_Bola_Fuego.wav'
+    ]);
+    this.load.audio('pisadas', [
+        'assets/PasosA.wav'
+    ]);
 }
     
     updateBar(percentage) {
