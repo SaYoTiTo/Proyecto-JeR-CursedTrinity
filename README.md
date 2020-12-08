@@ -226,7 +226,7 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
   
     - **Sala estandar**: Este modelo se repetirá en las siguientes salas solo que en las demás se añadiran otro tipo de elementos. En su interior se pueden encontrar enemigos que los jugadores tendrán que derrotar. Tanto en la esquina izquierda y derecha, tendremos la vida de los dos personajes jugables representados con corazones. Los cuales al ser golpeados poco a poco se vaciarán. 
     
-    ![alt text]()
+    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785916531091308564/unknown.png)
     
     - **Sala con puzzle**: Esta sala se basa en el modelo estandar aunque en esta se encontrara un sencillo puzzle que se podra resolver con las mecancias basicas de los personajes.
     
