@@ -210,17 +210,46 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
 
 # Pantallas diseñadas
 
-##  - Pantalla Menú Principal:
-Esta sería la primera pantalla que se vería al empezar el juego. En ella veremos el título del juego con su botón Jugar  que nos llevará directamente a la Pantalla de Seleccion de Personaje. 
+  - **Pantalla Menú Principal**: Esta sería la primera pantalla que se vería al empezar el juego. En ella veremos el título del juego con su botón *Jugar* que nos llevará directamente a la *Pantalla de Seleccion de Personaje*. 
 
- ## - Pantalla Selección de Personaje:
- En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Debido a que el juego por ahora es offline, solo se podrá jugar con dos de los personajes del juego: Arrow y Cauldron. Blade estará disponible en la siguiente fase ya que el grupo decidió que era más óptimo dejar solo dos jugadores en vez de tres en esta segunda fase. En esta pantalla, el jugador tendrá que pulsar uno de los personajes y pasará a la pantalla del tutorial.
+![alt text]()
 
- ## - Pantalla Tutorial: 
- En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
+  - **Pantalla Selección de Personaje:** En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Debido a que el juego por ahora es offline, solo se podrá jugar con dos de los personajes del juego: Arrow y Cauldron. Blade estará disponible en la siguiente fase ya que el grupo decidió que era más óptimo dejar solo dos jugadores en vez de tres en esta segunda fase. En esta pantalla, el jugador tendrá que pulsar uno de los personajes y pasará a la pantalla del tutorial.
 
- ## - Pantallas In Game:
-  - Sala estandar:
-  - Sala con puzzle
-  - Sala del Cofre
-  - Sala del Boss Final
+![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785916419296329768/unknown.png)
+
+  - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
+  
+  ![alt text]()
+
+  - **Pantallas In Game**: Ya que el juego se desarrolla en el interior de una mazmorra, hay diferentes tipos de salas en ella y, por lo tanto, diferentes pantallas *In Game*
+  
+    - **Sala estandar**: Este modelo se repetirá en las siguientes salas solo que en las demás se añadiran otro tipo de elementos. En su interior se pueden encontrar enemigos que los jugadores tendrán que derrotar. Tanto en la esquina izquierda y derecha, tendremos la vida de los dos personajes jugables representados con corazones. Los cuales al ser golpeados poco a poco se vaciarán. 
+    
+    ![alt text]()
+    
+    - **Sala con puzzle**: Esta sala se basa en el modelo estandar aunque en esta se encontrara un sencillo puzzle que se podra resolver con las mecancias basicas de los personajes.
+    
+    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785928798192664596/unknown.png)
+     ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785928908456591370/unknown.png)
+     
+    - **Sala del Cofre**:Esta sala también se basa en el modelo estandar pero en esta los personajes encontraran un cofre con una pocion de vida.
+    
+    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785929140767424512/unknown.png)
+    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785929255904477214/unknown.png)
+    
+#  Diagrama de navegación 
+Para mostrar mejor el transcurso de las diferentes pantallas del videojuego y a que pantalla se podria ir en cada una, se ha creado una diagrama de navegación para esta segunda fase del videojuego offline.
+
+ ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785942546969788436/newDiagramaFlujo.PNG)
+
+# Actualizaciones del diseño del juego
+
+En esta segunda fase de la práctica, el equipo empezó de cero separándose el trabajo después de organizarlo en trello. Una parte del equipo se ocupó de la parte artística, es decir, los sprites de personajes y enemigos; los escenarios con todos los sprites que necesite la sala (cofre, palanca, puente); el interfaz tanto de los menús como del gameplay; la música original y los sonidos ambientales.
+
+Todo ello fue creado mientras el equipo técnico programaba las mecánicas más importantes del juego, ya mencionadas en este documento, y el funcionamiento correcto de los menús, personajes, escenarios y enemigos del juego.
+
+Algún cambio no contemplado anteriormente, fue la incorporación de una pantalla tutorial para mostrar al jugador como funciona el juego. 
+
+Todos los sprites y la musica del videojuego ha sido creado originalmente por el equipo. Lo unico no original son los snidos utilzados en el juego como pisadas o disparos. Los creadores originales son los siguientes: Momeka en Escenarios, XLIVE99 en Antorchas, braqoon en Sonidos, kretopi en Sonidos, CTCollab en Sonidos, DWOBoyle en Sonidos, falcospizaetus en Sonidos.
+
