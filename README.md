@@ -220,7 +220,7 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
 
   - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
   
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786323914547527740/PantallaTutorial.png)
+  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786328560977051699/PantallaTutorial.png)
 
   - **Pantallas In Game**: Ya que el juego se desarrolla en el interior de una mazmorra, hay diferentes tipos de salas en ella y, por lo tanto, diferentes pantallas *In Game*
   
