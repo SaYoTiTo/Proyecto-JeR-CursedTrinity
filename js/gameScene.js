@@ -20,6 +20,7 @@ var auxLock2 = false;
 var auxLock3 = false;
 var auxLock3 = false;
 var timer;
+var music2;
 
 var heroAHearts;
 var heroAEmptyHearts;
@@ -417,7 +418,7 @@ export default class GameScene extends Phaser.Scene{
         this.physics.add.overlap(this.llamas, this.spider1, damageEnemy, null, this); 
         
         //The sound effects and music
-        var music2 = this.sound.add('dungeonMusic', {volume: 0.001});
+        music2 = this.sound.add('dungeonMusic', {volume: 0.001});
         music2.loop = true;
         music2.play();
         
@@ -1159,7 +1160,7 @@ function hitFireWall (llama, platforms){
         this.heroC.lifes--;
         //Dibuja corazones vacios
         if(this.heroC.lifes >= 0){
-            this.heroCHearts.list[this.heroC.lifes].disableBody(true, true);
+            heroCHearts.list[this.heroC.lifes].disableBody(true, true);
         }
         numFire = 0;
     }else{
@@ -1396,7 +1397,6 @@ function damageA(hero, enemy){
     if(boolA === true){
         //Aplica daño
         hero.lifes = hero.lifes - enemy.damage;
-        console.log(true);
         
         //Dibuja corazones vacios
         if(hero.lifes >= 0){
@@ -1412,7 +1412,6 @@ function damageC(hero, enemy){
     if(boolC === true){
         //Aplica daño
         hero.lifes = hero.lifes - enemy.damage;
-        console.log(true);
         
         //Dibuja corazones vacios
         if(hero.lifes >= 0){
@@ -1437,6 +1436,7 @@ function damageEnemy(enemy, weapon){
 }
 
 function pause(){
+    music2.stop();
     this.scene.pause();
     this.scene.launch('PauseScene');
 }
