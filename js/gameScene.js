@@ -15,6 +15,7 @@ var posX = 0;
 var posY = 0;
 var tilex = 0;
 var tiley = 0;
+var auxLock1 = false;
 var auxLock2 = false;
 var auxLock3 = false;
 var auxLock3 = false;
@@ -420,6 +421,9 @@ export default class GameScene extends Phaser.Scene{
         music2.loop = true;
         music2.play();
         
+        //The pause
+        this.input.keyboard.on('keydown-P', pause, this);
+
         /*
         var arrowWalkEffect = this.sound.add('pisadas', {volume: 0.01});
         arrowWalkEffect.loop = false;
@@ -732,7 +736,19 @@ export default class GameScene extends Phaser.Scene{
                     this.spider1.setVelocity(0);
                 }
                 //Animacion de la araña
-                this.spider1.anims.play('spiderMove', true); 
+                this.spider1.anims.play('spiderMove', true);                
+            }
+            
+            //Comprobar endgame
+            if(posX === 840 && posY === 0){
+            this.scene.stop('GameScene');
+            this.scene.start('CreditsScene');
+            }
+            
+            //Comprobar derrota
+            if(this.heroA.lifes === 0 && this.heroC.lifes === 0){
+                this.scene.stop('GameScene');
+                this.scene.start('GameOverScene');
             }
         }
     }
@@ -1418,4 +1434,9 @@ function damageEnemy(enemy, weapon){
         hijoPlat1[1].body.enable = false;
         aux3 = true;
     }
+}
+
+function pause(){
+    this.scene.pause();
+    this.scene.launch('PauseScene');
 }

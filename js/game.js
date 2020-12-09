@@ -4,6 +4,9 @@ import MenuScene from './menuScene.js';
 import CharScene from './charScene.js';
 import GameScene from './gameScene.js';
 import ControlsScene from './controlsScene.js';
+import GameOverScene from './gameOverScene.js';
+import CreditsScene from './creditsScene.js';
+import PauseScene from './pauseScene.js';
 
 //Creamos la configuracion global
 var config = {
@@ -26,6 +29,9 @@ game.scene.add('MenuScene', new MenuScene());
 game.scene.add('ControlsScene', new ControlsScene());
 game.scene.add('CharScene', new CharScene());
 game.scene.add('GameScene', new GameScene());
+game.scene.add('GameOverScene', new GameOverScene());
+game.scene.add('CreditsScene', new CreditsScene());
+game.scene.add('PauseScene', new PauseScene());
 
 //Exportamos el juego
 export { game };

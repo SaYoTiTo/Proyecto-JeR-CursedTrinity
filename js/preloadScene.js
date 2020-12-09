@@ -24,8 +24,9 @@ export default class PreloadScene extends Phaser.Scene{
          //Preload del menu
         this.load.image('menuBg', 'assets/panTit.png');
         this.load.image('botonJugar', 'assets/BotonJugar.png');
-	this.load.image('botonJugarNuevo', 'assets/BotonJugarNuevo.png');
+	    this.load.image('botonJugarNuevo', 'assets/BotonJugarNuevo.png');
         this.load.image('botonSalir', 'assets/BotonSalir.png');
+        this.load.image('botonSalirNuevo', 'assets/BotonSalirNuevo.png');
 
         //Preload del charSelScene
         this.load.image('charBg', 'assets/panChar.png');
@@ -33,6 +34,7 @@ export default class PreloadScene extends Phaser.Scene{
         this.load.image('cauldron', 'assets/cauldron.png');
         this.load.image('blade', 'assets/blade.png');
         this.load.image('botonVolver', 'assets/BotonVolver.png');
+        this.load.image('botonVolverNuevo', 'assets/BotonVolverNuevo.png');
 
         //Preload de los controles
         this.load.image('controlsBg', 'assets/controls.png');
@@ -40,15 +42,12 @@ export default class PreloadScene extends Phaser.Scene{
         //Preload del gameOver
         this.load.image('gameOverBg', 'assets/gameOver.png');
         
+        //Preload de los creditos
+        this.load.video('credits', 'assets/Credits.mp4');
+        
         //Preload del pause
         this.load.image('pauseBg', 'assets/pause.png');
         
-        //Preload del gameScene
-        this.load.spritesheet('heroA', 'assets/ArrowArmlessSpritesheet.png', {
-            frameWidth: 30,
-            frameHeight: 35,
-        });
-
         //Preload del gameScene
         this.load.spritesheet('heroA', 'assets/ArrowArmlessSpritesheet.png', {
             frameWidth: 30,
@@ -119,6 +118,7 @@ export default class PreloadScene extends Phaser.Scene{
         //Preload del HUD
         this.load.image('fullHeart', 'assets/Corazon_lleno.png');
         this.load.image('emptyHeart', 'assets/Corazon_vacia.png');
+        this.load.image('pauseBg', 'assets/pause.png');
 
         //Barra de carga
         this.load.on('progress', this.updateBar, {newGraphics:this.newGraphics,loadingText:loadingText});
