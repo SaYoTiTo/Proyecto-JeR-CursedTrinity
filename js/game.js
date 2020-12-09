@@ -11,8 +11,8 @@ import PauseScene from './pauseScene.js';
 //Creamos la configuracion global
 var config = {
     type: Phaser.AUTO,
-    width: 4200, //420
-    height: 3200,//320
+    width: 1260, //420
+    height: 640,//320
     pixelArt: true,
     zoom: 3,
     physics: {
