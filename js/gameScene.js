@@ -17,6 +17,7 @@ var tilex = 0;
 var tiley = 0;
 var auxLock2 = false;
 var auxLock3 = false;
+var auxLock3 = false;
 var timer;
 
 var heroAHearts;
@@ -114,8 +115,8 @@ export default class GameScene extends Phaser.Scene{
         //The openable doors
         platforms3 = this.physics.add.staticGroup();
 
-        //platforms3.create(210, 332, 'colliderH'); //4 
-        //platforms3.create(388, 470, 'colliderV'); //5
+        platforms3.create(210, 332, 'colliderH'); //4 
+        platforms3.create(388, 470, 'colliderV'); //5
 
         platforms3.create(808, 470, 'colliderV'); //9, pos0
         platforms3.create(454, 470, 'colliderV'); //11, pos1
@@ -180,22 +181,30 @@ export default class GameScene extends Phaser.Scene{
 
         funDoors = this.physics.add.staticGroup();
 
+        this.lock4 = this.add.sprite(208, 349, 'lockH', 0); 
+        this.lock4.setDepth(-4);
+        this.lock4.setVisible(false);
+        funDoors.add(this.lock4); //0
+        this.lock5 = this.add.sprite(390, 480, 'lockV', 0); //390 160
+        this.lock5.setDepth(-4);
+        this.lock5.setVisible(false);
+        funDoors.add(this.lock5); //1
         this.lock9 = this.add.sprite(810, 480, 'lockV', 0); //390 160
         this.lock9.setDepth(-4);
         this.lock9.setVisible(false);
-        funDoors.add(this.lock9); //0
+        funDoors.add(this.lock9); //2
         this.lock11 = this.add.sprite(455, 480, 'lockV', 0);
         this.lock11.setDepth(-4);
         this.lock11.setVisible(false);
-        funDoors.add(this.lock11); //1
+        funDoors.add(this.lock11); //3
         this.lock12 = this.add.sprite(1048, 349, 'lockH', 0);
         this.lock12.setDepth(-4);
         this.lock12.setVisible(false);
-        funDoors.add(this.lock12); //2
+        funDoors.add(this.lock12); //4
         this.lock15 = this.add.sprite(875, 480, 'lockV', 0);
         this.lock15.setDepth(-4);
         this.lock15.setVisible(false);
-        funDoors.add(this.lock15); //3
+        funDoors.add(this.lock15); //5
         //this.lock.setFlip(false, false);
 
         this.bg = this.physics.add.sprite(210, 160, 'bg', 0);
@@ -251,7 +260,7 @@ export default class GameScene extends Phaser.Scene{
         //this.sword = this.physics.add.sprite(this.heroB.x, this.heroB.y, 'sword', 0).setOrigin(0);
 
         //The spider
-        this.spider1 = this.physics.add.sprite(80,80,'spider').setScale(3).refreshBody(); 
+        this.spider1 = this.physics.add.sprite(340,480,'spider').setScale(2).refreshBody(); 
         this.spider1.damage = 1;
         
         //The top in view
@@ -714,15 +723,17 @@ export default class GameScene extends Phaser.Scene{
                 this.heroC.setVisible(false);
             }
             
-            if(distA <= distC && distA !== 5000){
-                this.physics.moveToObject(this.spider1, this.heroA, 50);
-            }else if(distC !== 5000){
-                this.physics.moveToObject(this.spider1, this.heroC, 50);
-            }else{
-                this.spider1.setVelocity(0);
+            if(this.heroA.y > 320){
+                if(distA <= distC && distA !== 5000){
+                    this.physics.moveToObject(this.spider1, this.heroA, 50);
+                }else if(distC !== 5000){
+                    this.physics.moveToObject(this.spider1, this.heroC, 50);
+                }else{
+                    this.spider1.setVelocity(0);
+                }
+                //Animacion de la araña
+                this.spider1.anims.play('spiderMove', true); 
             }
-            //Animacion de la araña
-            this.spider1.anims.play('spiderMove', true); 
         }
     }
 }
@@ -1031,7 +1042,7 @@ var f3 = function(pointer) {
 }
 */    
 var s = function(pointer) {
-    if(pointer.leftButtonDown()){
+    if(pointer.leftButtonDown() && this.heroA.lifes > 0){
     this.bow.anims.play('shoot', true);
     var flecha = this.flechas.get(this.bow.x, this.bow.y);
     var angle1 = Phaser.Math.RAD_TO_DEG * Phaser.Math.Angle.Between(this.bow.x, this.bow.y, pointer.x + this.cameras.main.worldView.x, pointer.y + this.cameras.main.worldView.y);
@@ -1055,7 +1066,7 @@ var s = function(pointer) {
 }
         
 var s2 = function(pointer) {
-    if(pointer.rightButtonDown()){
+    if(pointer.rightButtonDown() && this.heroC.lifes > 0){
     this.book.anims.play('shoot2', true);
     var llama = this.llamas.get(this.book.x, this.book.y);
     this.llamas.playAnimation('moveFire');
@@ -1112,8 +1123,8 @@ function hitArrowLever (flecha, palanca){
         this.lock11.anims.play('doorOpeningV', true);
         removable.clear();
         var hijoPlat3 = platforms3.getChildren();
-        hijoPlat3[0].body.enable = false;
-        hijoPlat3[1].body.enable = false;
+        hijoPlat3[2].body.enable = false;
+        hijoPlat3[3].body.enable = false;
         aux1 = true;
     }
 
@@ -1129,6 +1140,11 @@ function hitFireWall (llama, platforms){
         this.explosion2.anims.play('bigE', true);
         //funcion
         this.explosion2.body.enable = false;
+        this.heroC.lifes--;
+        //Dibuja corazones vacios
+        if(this.heroC.lifes >= 0){
+            this.heroCHearts.list[this.heroC.lifes].disableBody(true, true);
+        }
         numFire = 0;
     }else{
         this.explosion = this.physics.add.sprite(llama.x, llama.y, 'explosion', 0);
@@ -1159,8 +1175,8 @@ function playerChest(player, chest){
         this.lock12.anims.play('doorOpeningH', true);
         this.lock15.anims.play('doorOpeningV', true);
         var hijoPlat3 = platforms3.getChildren();
-        hijoPlat3[2].body.enable = false;
-        hijoPlat3[3].body.enable = false;
+        hijoPlat3[4].body.enable = false;
+        hijoPlat3[5].body.enable = false;
         aux2 = true;
     }
 }
@@ -1311,52 +1327,45 @@ function cambioSala(posX, posY){
 function doorRegulation(tilex, tiley, funDoors){
     var cerrojos = funDoors.getChildren();
     var lockCollider = platforms3.getChildren();
-            switch(tilex){
-                case 1:
-                    switch(tiley){
-                        case 1:
-                            if(auxLock2 === false){
-                                /*
-                                lock9.setVisible(true);
-                                lock11.setVisible(true);
-                                lock9.anims.play('doorCloseningV', true);
-                                lock11.anims.play('doorCloseningV', true);
-                                auxLock2 = true;*/
+            if(tilex == 0){
+                if(tiley == 1){
+                    if(auxLock1 === false){
                                 cerrojos[0].setVisible(true);
                                 cerrojos[1].setVisible(true);
-                                cerrojos[0].anims.play('doorCloseningV', true);
+                                cerrojos[0].anims.play('doorCloseningH', true);
                                 cerrojos[1].anims.play('doorCloseningV', true);
                                 lockCollider[0].body.enable = true;
                                 lockCollider[1].body.enable = true;
-                                auxLock2 = true;
+                                auxLock1 = true;
                             }
-                        break;
-                    }
-                    break;
-                case 2:
-                    switch(tiley){
-                        case 1:
-                            if(auxLock3 === false){
-                                /*lock12.setVisible(true);
-                                lock15.setVisible(true);
-                                lock12.anims.play('doorCloseningH', true);
-                                lock15.anims.play('doorCloseningV', true);
-                                auxLock3 = true;*/
+                }
+            }else if(tilex == 1){
+                if(tiley == 1){
+                    if(auxLock2 === false){
                                 cerrojos[2].setVisible(true);
                                 cerrojos[3].setVisible(true);
-                                cerrojos[2].anims.play('doorCloseningH', true);
+                                cerrojos[2].anims.play('doorCloseningV', true);
                                 cerrojos[3].anims.play('doorCloseningV', true);
                                 lockCollider[2].body.enable = true;
                                 lockCollider[3].body.enable = true;
+                                auxLock2 = true;
+                            }
+                }
+            }else if(tilex == 2){
+                if(tiley == 1){
+                    if(auxLock3 === false){
+                                cerrojos[4].setVisible(true);
+                                cerrojos[5].setVisible(true);
+                                cerrojos[4].anims.play('doorCloseningH', true);
+                                cerrojos[5].anims.play('doorCloseningV', true);
+                                lockCollider[4].body.enable = true;
+                                lockCollider[5].body.enable = true;
                                 auxLock3 = true;
                             }
-                        break;
                 }
-                break;
             }
-
+    
 }
-
 var boolA = true;
 var boolC = true;
 
@@ -1397,7 +1406,16 @@ function damageC(hero, enemy){
     }
 }
 
+var aux3 = false;
 function damageEnemy(enemy, weapon){
     enemy.disableBody(true, true);
     enemy.setActive(false);
+    if(aux3 === false){
+        this.lock4.anims.play('doorOpeningH', true);
+        this.lock5.anims.play('doorOpeningV', true);
+        var hijoPlat1 = platforms3.getChildren();
+        hijoPlat1[0].body.enable = false;
+        hijoPlat1[1].body.enable = false;
+        aux3 = true;
+    }
 }
