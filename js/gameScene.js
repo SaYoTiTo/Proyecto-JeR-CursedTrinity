@@ -19,6 +19,11 @@ var auxLock2 = false;
 var auxLock3 = false;
 var timer;
 
+var heroAHearts;
+var heroAEmptyHearts;
+var heroCHearts;
+var heroCEmptyHearts;
+
 export default class GameScene extends Phaser.Scene{
     
     constructor(){
@@ -315,44 +320,56 @@ export default class GameScene extends Phaser.Scene{
 
         //HUD
         //Arrow Empty hearts
-        this.heroAEmptyHearts = this.physics.add.group();
-        this.heroAEmptyHearts.create(50,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroAEmptyHearts.create(80,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroAEmptyHearts.create(110,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroAEmptyHearts.create(140,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroAEmptyHearts.create(170,30,'emptyHeart').setScale(0.3).refreshBody();
+        heroAEmptyHearts = this.add.container(50,30);
+        var AEmptyHeart1 = this.physics.add.sprite(0,0,'emptyHeart').setScale(0.3).refreshBody();
+        var AEmptyHeart2 = this.physics.add.sprite(30,0,'emptyHeart').setScale(0.3).refreshBody();
+        var AEmptyHeart3 = this.physics.add.sprite(60,0,'emptyHeart').setScale(0.3).refreshBody();
+        var AEmptyHeart4 = this.physics.add.sprite(90,0,'emptyHeart').setScale(0.3).refreshBody();
+        var AEmptyHeart5 = this.physics.add.sprite(120,0,'emptyHeart').setScale(0.3).refreshBody();
+        heroAEmptyHearts.addAt(AEmptyHeart1,0);
+        heroAEmptyHearts.addAt(AEmptyHeart2,1);
+        heroAEmptyHearts.addAt(AEmptyHeart3,2);
+        heroAEmptyHearts.addAt(AEmptyHeart4,3);
+        heroAEmptyHearts.addAt(AEmptyHeart5,4);
+        
         //Arrow hearts
-        this.heroAHearts = this.add.container(50,30);
+        heroAHearts = this.add.container(50,30);
         var AHeart1 = this.physics.add.sprite(0,0,'fullHeart').setScale(0.3).refreshBody();
         var AHeart2 = this.physics.add.sprite(30,0,'fullHeart').setScale(0.3).refreshBody();
         var AHeart3 = this.physics.add.sprite(60,0,'fullHeart').setScale(0.3).refreshBody();
         var AHeart4 = this.physics.add.sprite(90,0,'fullHeart').setScale(0.3).refreshBody();
         var AHeart5 = this.physics.add.sprite(120,0,'fullHeart').setScale(0.3).refreshBody();
-        this.heroAHearts.addAt(AHeart1,0);
-        this.heroAHearts.addAt(AHeart2,1);
-        this.heroAHearts.addAt(AHeart3,2);
-        this.heroAHearts.addAt(AHeart4,3);
-        this.heroAHearts.addAt(AHeart5,4);
+        heroAHearts.addAt(AHeart1,0);
+        heroAHearts.addAt(AHeart2,1);
+        heroAHearts.addAt(AHeart3,2);
+        heroAHearts.addAt(AHeart4,3);
+        heroAHearts.addAt(AHeart5,4);
         
         //Cauldron Empty hearts
-        this.heroCEmptyHearts = this.physics.add.group();
-        this.heroCEmptyHearts.create(250,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroCEmptyHearts.create(280,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroCEmptyHearts.create(310,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroCEmptyHearts.create(340,30,'emptyHeart').setScale(0.3).refreshBody();
-        this.heroCEmptyHearts.create(370,30,'emptyHeart').setScale(0.3).refreshBody();
+        heroCEmptyHearts = this.add.container(250,30);
+        var CEmptyHeart1 = this.physics.add.sprite(0,0,'emptyHeart').setScale(0.3).refreshBody();
+        var CEmptyHeart2 = this.physics.add.sprite(30,0,'emptyHeart').setScale(0.3).refreshBody();
+        var CEmptyHeart3 = this.physics.add.sprite(60,0,'emptyHeart').setScale(0.3).refreshBody();
+        var CEmptyHeart4 = this.physics.add.sprite(90,0,'emptyHeart').setScale(0.3).refreshBody();
+        var CEmptyHeart5 = this.physics.add.sprite(120,0,'emptyHeart').setScale(0.3).refreshBody();
+        heroCEmptyHearts.addAt(CEmptyHeart1,0);
+        heroCEmptyHearts.addAt(CEmptyHeart2,1);
+        heroCEmptyHearts.addAt(CEmptyHeart3,2);
+        heroCEmptyHearts.addAt(CEmptyHeart4,3);
+        heroCEmptyHearts.addAt(CEmptyHeart5,4);
+        
         //Cauldron hearts
-        this.heroCHearts = this.add.container(250,30);
+        heroCHearts = this.add.container(250,30);
         var CHeart1 = this.physics.add.sprite(0,0,'fullHeart').setScale(0.3).refreshBody();
         var CHeart2 = this.physics.add.sprite(30,0,'fullHeart').setScale(0.3).refreshBody();
         var CHeart3 = this.physics.add.sprite(60,0,'fullHeart').setScale(0.3).refreshBody();
         var CHeart4 = this.physics.add.sprite(90,0,'fullHeart').setScale(0.3).refreshBody();
         var CHeart5 = this.physics.add.sprite(120,0,'fullHeart').setScale(0.3).refreshBody();
-        this.heroCHearts.addAt(CHeart1,0);
-        this.heroCHearts.addAt(CHeart2,1);
-        this.heroCHearts.addAt(CHeart3,2);
-        this.heroCHearts.addAt(CHeart4,3);
-        this.heroCHearts.addAt(CHeart5,4);
+        heroCHearts.addAt(CHeart1,0);
+        heroCHearts.addAt(CHeart2,1);
+        heroCHearts.addAt(CHeart3,2);
+        heroCHearts.addAt(CHeart4,3);
+        heroCHearts.addAt(CHeart5,4);
         
         //Colliders
         this.physics.add.collider(this.heroA, platforms);
@@ -1154,6 +1171,12 @@ function cambioCamA(heroA, heroC, cameras, funDoors){
         heroC.x = posX + 65; 
         heroC.y = posY + 90;
         heroA.x = posX + 65;
+        
+        heroAHearts.x = heroAHearts.x + posX;
+        heroAEmptyHearts.x = heroAEmptyHearts.x + posX;
+    
+        heroCHearts.x = heroCHearts.x + posX;
+        heroCEmptyHearts.x = heroCEmptyHearts.x + posX;
     }else if(heroA.body.position.x < posX){
         posX = posX - 420;
         tilex = tilex - 1;
@@ -1162,7 +1185,14 @@ function cambioCamA(heroA, heroC, cameras, funDoors){
         doorRegulation(tilex, tiley, funDoors);
         heroC.x = posX + 355; 
         heroC.y = posY + 90;
-        heroA.x = posX + 355;}
+        heroA.x = posX + 355;
+        
+        heroAHearts.x = heroAHearts.x - 420;
+        heroAEmptyHearts.x = heroAEmptyHearts.x - 420;
+    
+        heroCHearts.x = heroCHearts.x - 420;
+        heroCEmptyHearts.x = heroCEmptyHearts.x - 420;
+    }
     if(heroA.body.position.y > 320 + posY){
         posY = posY + 320;
         tiley = tiley + 1;
@@ -1172,6 +1202,12 @@ function cambioCamA(heroA, heroC, cameras, funDoors){
         heroC.x = posX + 120;
         heroC.y = posY + 50;
         heroA.y = posY + 50;
+        
+        heroAHearts.y = heroAHearts.y + 320;
+        heroAEmptyHearts.y = heroAEmptyHearts.y + 320;
+    
+        heroCHearts.y = heroCHearts.y + 320;
+        heroCEmptyHearts.y = heroCEmptyHearts.y + 320;
     }else if(heroA.body.position.y < posY){
         posY = posY - 320;
         tiley = tiley - 1;
@@ -1181,6 +1217,12 @@ function cambioCamA(heroA, heroC, cameras, funDoors){
         heroC.x = posX + 120;
         heroC.y = posY + 240;
         heroA.y = posY + 240;
+        
+        heroAHearts.y = heroAHearts.y - 320;
+        heroAEmptyHearts.y = heroAEmptyHearts.y - 320;
+    
+        heroCHearts.y = heroCHearts.y - 320;
+        heroCEmptyHearts.y = heroCEmptyHearts.y - 320;
     }
 }
 
@@ -1259,7 +1301,7 @@ function cambioSala(posX, posY){
 
     children = nieblas.getChildren();
     children[0].x = posX + 630;
-    children[0].y = posY + 160;        
+    children[0].y = posY + 160;     
 }
 
 function doorRegulation(tilex, tiley, funDoors){
@@ -1329,7 +1371,7 @@ function damageA(hero, enemy){
         
         //Dibuja corazones vacios
         if(hero.lifes >= 0){
-            this.heroAHearts.list[hero.lifes].disableBody(true, true);
+            heroAHearts.list[hero.lifes].disableBody(true, true);
         }
         boolA = false;
     }
@@ -1345,7 +1387,7 @@ function damageC(hero, enemy){
         
         //Dibuja corazones vacios
         if(hero.lifes >= 0){
-            this.heroCHearts.list[hero.lifes].disableBody(true, true);
+            heroCHearts.list[hero.lifes].disableBody(true, true);
         }
         boolC = false;
     }
