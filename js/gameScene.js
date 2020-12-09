@@ -374,10 +374,13 @@ export default class GameScene extends Phaser.Scene{
         //Colliders
         this.physics.add.collider(this.heroA, platforms);
         this.physics.add.collider(this.heroC, platforms);
+        this.physics.add.collider(this.spider1, platforms);
         this.physics.add.collider(this.heroA, platforms2);
         this.physics.add.collider(this.heroC, platforms2);
+        this.physics.add.collider(this.spider1, platforms2);
         this.physics.add.collider(this.heroA, platforms3);
         this.physics.add.collider(this.heroC, platforms3);
+        this.physics.add.collider(this.spider1, platforms3);
         this.physics.add.collider(this.heroA, this.chest, playerChest, null, this);
         this.physics.add.collider(this.heroC, this.chest, playerChest, null, this);
         //this.physics.add.collider(this.heroA, flecha, hitArrowHero, null, this);
@@ -385,6 +388,7 @@ export default class GameScene extends Phaser.Scene{
         this.physics.add.collider(this.heroC, abism);
         this.physics.add.collider(this.heroA, removable);
         this.physics.add.collider(this.heroC, removable);
+        this.physics.add.collider(this.spider1, removable);
         this.physics.add.collider(this.heroA, this.palanca);
         this.physics.add.collider(this.heroC, this.palanca);
         //this.physics.add.collider(this.heroB, platforms);
