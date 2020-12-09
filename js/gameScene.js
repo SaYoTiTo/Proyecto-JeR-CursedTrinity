@@ -1172,11 +1172,11 @@ function cambioCamA(heroA, heroC, cameras, funDoors){
         heroC.y = posY + 90;
         heroA.x = posX + 65;
         
-        heroAHearts.x = heroAHearts.x + posX;
-        heroAEmptyHearts.x = heroAEmptyHearts.x + posX;
+        heroAHearts.x = heroAHearts.x + 420;
+        heroAEmptyHearts.x = heroAEmptyHearts.x + 420;
     
-        heroCHearts.x = heroCHearts.x + posX;
-        heroCEmptyHearts.x = heroCEmptyHearts.x + posX;
+        heroCHearts.x = heroCHearts.x + 420;
+        heroCEmptyHearts.x = heroCEmptyHearts.x + 420;
     }else if(heroA.body.position.x < posX){
         posX = posX - 420;
         tilex = tilex - 1;
