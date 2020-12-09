@@ -10,6 +10,7 @@ var removable;
 var doors;
 var funDoors;
 var nieblas;
+var auxM = false;
 
 var posX = 0;
 var posY = 0;
@@ -278,9 +279,7 @@ export default class GameScene extends Phaser.Scene{
         /*
         //The walls
         platforms = this.physics.add.staticGroup();
-
         //platforms.create(40, 56, 'ground').setScale(2).refreshBody();
-
         platforms.create(65, 12, 'colliderH');
         platforms.create(143, 12, 'colliderH');
         platforms.create(276, 12, 'colliderH');
@@ -297,23 +296,17 @@ export default class GameScene extends Phaser.Scene{
         platforms.create(388, 81, 'colliderV');
         platforms.create(388, 218, 'colliderV');
         platforms.create(388, 228, 'colliderV');
-
-
         //The abism
         abism = this.physics.add.staticGroup();
-
         abism.create(309, 81, 'colliderAbismo');
         abism.create(309, 207, 'colliderAbismo');
-
         //The bridge
         removable = this.physics.add.staticGroup();
-
         removable.create(309, 150, 'colliderRemovible');
         /**/
         /*
         //The spiderwebs that Blade can cut through
         spiderWeb = this.physics.add.staticGroup();
-
         spiderWeb.create(340, 120, 'spiderWeb');
         spiderWeb.create(45, 120, 'spiderWeb');
         */
@@ -418,9 +411,9 @@ export default class GameScene extends Phaser.Scene{
         this.physics.add.overlap(this.llamas, this.spider1, damageEnemy, null, this); 
         
         //The sound effects and music
-        music2 = this.sound.add('dungeonMusic', {volume: 0.001});
+        music2 = this.sound.add('dungeonMusic', {volume: 0.01});
         music2.loop = true;
-        music2.play();
+        
         
         //The pause
         this.input.keyboard.on('keydown-P', pause, this);
@@ -539,7 +532,6 @@ export default class GameScene extends Phaser.Scene{
             idle3: new IdleState3(),
             move3: new MoveState3(),
         }, [this, this.heroB, this.sword]);
-
         this.anims.create({
             key: 'idle3',
             frameRate: 15,
@@ -683,6 +675,11 @@ export default class GameScene extends Phaser.Scene{
     
     update() {
         if(document.readyState === 'complete'){
+            if(auxM == false){
+                music2.play();
+                auxM = true;
+            }
+            
             if(this.heroA.lifes !== 0){
                 this.stateMachine.step();
                 this.bow.x = this.heroA.body.position.x+15;
@@ -742,12 +739,14 @@ export default class GameScene extends Phaser.Scene{
             
             //Comprobar endgame
             if(posX === 840 && posY === 0){
-            this.scene.stop('GameScene');
-            this.scene.start('CreditsScene');
+                music2.pause();
+                this.scene.stop('GameScene');
+                this.scene.start('CreditsScene');
             }
             
             //Comprobar derrota
             if(this.heroA.lifes === 0 && this.heroC.lifes === 0){
+                music2.pause();
                 this.scene.stop('GameScene');
                 this.scene.start('GameOverScene');
             }
@@ -822,24 +821,20 @@ class StateMachine3 {
         this.possibleStates3 = possibleStates3;
         this.stateArgs3 = stateArgs3;
         this.state3 = null;
-
     // State instances get access to the state machine via this.stateMachine.
     for (const state3 of Object.values(this.possibleStates3)) {
       state3.stateMachine3 = this;
     }
   }
-
   step3() {
     // On the first step, the state is null and we need to initialize the first state.
     if (this.state3 === null) {
       this.state3 = this.initialState3;
       this.possibleStates3[this.state3].enter3(...this.stateArgs3);
     }
-
     // Run the current state's execute
     this.possibleStates3[this.state3].execute3(...this.stateArgs3);
   }
-
   transition3(newState3, ...enterArgs3) {
     this.state3 = newState3;
     this.possibleStates3[this.state3].enter3(...this.stateArgs3, ...enterArgs3);
@@ -870,11 +865,8 @@ class State2 {
 /*
 class State3 {
   enter3() {
-
   }
-
   execute3() {
-
   }
 }
 */
@@ -929,10 +921,8 @@ class IdleState3 extends State3 {
     heroB.anims.play(`idle3`, true);
     sword.anims.play('static3', true);
   }
-
   execute3(scene, heroB, sword) {
     const {left, right, up, down, space, left2, right2, up2, down2, space2, left3, right3, up3, down3, space3} = scene.keys;
-
     // Transition to move if pressing a movement key
     if (left3.isDown || right3.isDown || up3.isDown || down3.isDown) {
       this.stateMachine3.transition3('move3');
@@ -1014,13 +1004,11 @@ class MoveState2 extends State2 {
 class MoveState3 extends State3 {
   execute3(scene, heroB, sword) {
     const {left, right, up, down, space, left2, right2, up2, down2, space2, left3, right3, up3, down3, space3} = scene.keys;
-
     // Transition to idle if not pressing movement keys
     if (!(left3.isDown || right3.isDown || up3.isDown || down3.isDown)) {
       this.stateMachine3.transition3('idle3');
       return;
     }
-
     heroB.setVelocity(0);
     if (up3.isDown) {
         heroB.setVelocityY(-80);
@@ -1036,7 +1024,6 @@ class MoveState3 extends State3 {
         heroB.setVelocityX(100);
         heroB.direction = 'right';
     }
-
     heroB.anims.play(`walk-${heroB.direction}3`, true);
   }
 }
@@ -1105,7 +1092,6 @@ var s2 = function(pointer) {
 }
 /*
 var rate = 0;
-
 var s3 = function(pointer) {
     var angle1 = Phaser.Math.RAD_TO_DEG * Phaser.Math.Angle.Between(this.sword.x, this.sword.y, pointer.x + this.cameras.main.worldView.x, pointer.y + this.cameras.main.worldView.y);
     var angle2 = Phaser.Math.Angle.Between(this.sword.x, this.sword.y, pointer.x + this.cameras.main.worldView.x, pointer.y + this.cameras.main.worldView.y);
