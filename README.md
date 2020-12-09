@@ -241,7 +241,7 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
 #  Diagrama de navegación 
 Para mostrar mejor el transcurso de las diferentes pantallas del videojuego y a que pantalla se podria ir en cada una, se ha creado una diagrama de navegación para esta segunda fase del videojuego offline.
 
- ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785942546969788436/newDiagramaFlujo.PNG)
+ ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786326873649971261/DiagramaDeFlujo.PNG)
 
 # Actualizaciones del diseño del juego
 
