@@ -220,13 +220,13 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
 
   - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
   
-  ![alt text]()
+  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786323914547527740/PantallaTutorial.png)
 
   - **Pantallas In Game**: Ya que el juego se desarrolla en el interior de una mazmorra, hay diferentes tipos de salas en ella y, por lo tanto, diferentes pantallas *In Game*
   
     - **Sala estandar**: Este modelo se repetirá en las siguientes salas solo que en las demás se añadiran otro tipo de elementos. En su interior se pueden encontrar enemigos que los jugadores tendrán que derrotar. Tanto en la esquina izquierda y derecha, tendremos la vida de los dos personajes jugables representados con corazones. Los cuales al ser golpeados poco a poco se vaciarán. 
     
-    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785916531091308564/unknown.png)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786316267782668368/SalaEstandar.PNG)
     
     - **Sala con puzzle**: Esta sala se basa en el modelo estandar aunque en esta se encontrara un sencillo puzzle que se podra resolver con las mecancias basicas de los personajes.
     
