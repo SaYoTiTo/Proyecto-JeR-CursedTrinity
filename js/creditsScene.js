@@ -6,7 +6,7 @@ export default class CreditsScene extends Phaser.Scene{
             
     create(){
         
-        this.credits = this.add.video(250,200,'credits').setScale(0.4,0.4);
+        this.credits = this.add.video(210,160,'credits');
         this.credits.play(false);
             
         this.credits.setInteractive();
