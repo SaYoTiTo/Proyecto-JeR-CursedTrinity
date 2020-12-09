@@ -212,11 +212,11 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
 
   - **Pantalla Menú Principal**: Esta sería la primera pantalla que se vería al empezar el juego. En ella veremos el título del juego con su botón *Jugar* que nos llevará directamente a la *Pantalla de Seleccion de Personaje*. 
 
-![alt text]()
+![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314513531666432/MenuPrincipal.PNG)
 
   - **Pantalla Selección de Personaje:** En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Debido a que el juego por ahora es offline, solo se podrá jugar con dos de los personajes del juego: Arrow y Cauldron. Blade estará disponible en la siguiente fase ya que el grupo decidió que era más óptimo dejar solo dos jugadores en vez de tres en esta segunda fase. En esta pantalla, el jugador tendrá que pulsar uno de los personajes y pasará a la pantalla del tutorial.
 
-![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785916419296329768/unknown.png)
+![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314537992978462/SeleccionDePersonaje.PNG)
 
   - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
   
@@ -230,13 +230,13 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
     
     - **Sala con puzzle**: Esta sala se basa en el modelo estandar aunque en esta se encontrara un sencillo puzzle que se podra resolver con las mecancias basicas de los personajes.
     
-    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785928798192664596/unknown.png)
-     ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785928908456591370/unknown.png)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314573208617000/SalaPuzzle1.PNG)
+     ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314651620343808/SalaPuzzle2.PNG)
      
     - **Sala del Cofre**:Esta sala también se basa en el modelo estandar pero en esta los personajes encontraran un cofre con una pocion de vida.
     
-    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785929140767424512/unknown.png)
-    ![alt text](https://cdn.discordapp.com/attachments/503507632418455564/785929255904477214/unknown.png)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314673841635358/SalaTesoro1.PNG)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314689075609720/SalaTesoro2.PNG)
     
 #  Diagrama de navegación 
 Para mostrar mejor el transcurso de las diferentes pantallas del videojuego y a que pantalla se podria ir en cada una, se ha creado una diagrama de navegación para esta segunda fase del videojuego offline.
