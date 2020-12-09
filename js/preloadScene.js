@@ -24,6 +24,7 @@ export default class PreloadScene extends Phaser.Scene{
          //Preload del menu
         this.load.image('menuBg', 'assets/panTit.png');
         this.load.image('botonJugar', 'assets/BotonJugar.png');
+	this.load.image('botonJugarNuevo', 'assets/BotonJugarNuevo.png');
         this.load.image('botonSalir', 'assets/BotonSalir.png');
 
         //Preload del charSelScene
