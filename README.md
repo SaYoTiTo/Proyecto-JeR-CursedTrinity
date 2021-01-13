@@ -289,7 +289,7 @@ En este apartado se puede observar cuales han sido las clases usadas y como se r
  Aqui vienen los pasos a seguir para hacer funcionar el chat implementado en el juego Cursed Trinity de Juegos en Red.
  
   - Para empezar se debe encender la consola de comandos, es decir, el cmd y buscar mediante la sentencia "cd" la carpeta
-donde se encuentra el .jar. **Por ejemplo: "cd C:\Users\Davisaya\Documents\workspace-spring-tool-suite-4-4.9.0.RELEASE\CursedTrinity\target"**
+**target**, donde se encuentra el .jar.
 
   - En cuanto estemos ya dentro de esta carpeta, mediante el cmd se tendra que poner a correr el servidor mediante la siguiente
 sentencia: **"java -jar CursedTrinity-0.0.1-SNAPSHOT.jar".**
