@@ -8,6 +8,7 @@
     <title>CURSED TRINITY</title>
     <!-- Imports del juego -->
     <script src="js/phaser.js"></script>
+    <script type="module" src = "js/game.js"></script> 
 </head>
 <style>
 body {
@@ -95,11 +96,14 @@ th {
 
 
 </style>
+
 <body style="background-color:black;">
-	<script type="module" src = "js/game.js"></script>  
+	<button onclick="myFunction()">CHAT</button>
 	<table style="width:100%">
+	
 	<th>
-    <h1>CURSED CHAT</h1>
+	<div id = "chat">
+    <h1 id="header">CURSED CHAT</h1>
         
     <div  id="players">DISCONNECTED</div>
     <p></p>
@@ -107,13 +111,25 @@ th {
     <button class="container darker", id='connect'>CONNECT</button>
     <p></p>
     <button class="container", id='disconnect'>DISCONNECT</button>
-
     <p class = "container2"></p>
     <div class="scroll", id='message'></div>
     <input class="container", id='enterMessage' onclick="this.value='';" type='text'>
     <button class="container darker", id='sendMessage'>SEND</button>
+	</div>
 	</th>
+	
 	</table>
+	<script>
+		function myFunction() {
+  			var a = document.getElementById("chat");
+  			if (a.style.display === "none") {
+    			a.style.display = "block";
+  			} else {
+    			a.style.display = "none";
+  			}
+ 
+		}
+	</script>
 </body>
 
 </html>
