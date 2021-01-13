@@ -253,3 +253,40 @@ Algún cambio no contemplado anteriormente, fue la incorporación de una pantall
 
 Todos los sprites y la musica del videojuego ha sido creado originalmente por el equipo. Lo unico no original son los snidos utilzados en el juego como pisadas o disparos. Los creadores originales son los siguientes: Momeka en Escenarios, XLIVE99 en Antorchas, braqoon en Sonidos, kretopi en Sonidos, CTCollab en Sonidos, DWOBoyle en Sonidos, falcospizaetus en Sonidos.
 
+# FASE 3
+
+Después de completar las bases del juego el equipo de desarrollo comenzo a trabajar en el chat, empezando así la fase 3. En esta sección añadiremos las diferentes actualizaciones que se han realizado durante esta fase.
+
+# Navegación
+
+Aqui enseñaremos las pantallas principales con el chat implementado en ellas. Dabido a que la navegacion por las pantallas no ha cambiado, no pondremos de nuevo el diagrama de navegacion creado en la fase 2.
+
+  - **Pantalla Menú Principal**: Esta sería la primera pantalla que se vería al empezar el juego con el chat en la parte superior de la pantalla. 
+
+![alt text](https://media.discordapp.net/attachments/503134276439769088/798894424847155220/unknown.png?width=499&height=599)
+
+  - **Pantalla Selección de Personaje:** En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Aunque todavia no se puede elegir realmente ya que el juego sigue siendo offline; aunque podemos hablar en cualquier momento con cualquier persona en el chat.
+
+![alt text](https://cdn.discordapp.com/attachments/503134276439769088/798894736022175764/unknown.png)
+
+  - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente; junto con el chat en la parte superior.
+  
+  ![alt text](https://cdn.discordapp.com/attachments/503134276439769088/798894641717837854/unknown.png)
+
+  - **Pantallas In Game**: Este es un ejemplo de las salas en las que nos moveremos por la mazmorra junto con el chat disponible arriba a la izquierda.
+    
+    ![alt text](https://cdn.discordapp.com/attachments/503134276439769088/798894891186782238/unknown.png)
+  
+  
+# Diagrama de clases y API REST
+
+En este apartado se puede observar cuales han sido las clases usadas y como se relacionan entre sí las mismas.
+
+  ![alt text](https://cdn.discordapp.com/attachments/503134276439769088/798867225049301022/unknown.png)
+    
+    
+ # Instrucciones precisas para ejecutar la aplicación
+  - 
+  -
+  -
+ 
