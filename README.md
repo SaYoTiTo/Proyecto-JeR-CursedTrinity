@@ -293,9 +293,8 @@ En este apartado se puede observar cuales han sido las clases usadas y como se r
 
   - En cuanto estemos ya dentro de esta carpeta, mediante el cmd se tendra que poner a correr el servidor mediante la siguiente
 sentencia: **"java -jar CursedTrinity-0.0.1-SNAPSHOT.jar".**
-  - Tras esto, el server se pondra en funcionamiento. A partir de aqui, solamente se deberia abrir el juego desde su index.html
-lanzandolo desde la aplicacion **"Web Server for Chrome"**. Para ello abria que elegir la carpeta donde se encuentra este mismo
-archivo y lanzar el juego. 
+  - Tras esto, el server se pondra en funcionamiento. Para llegar al juego y poder probar el chat se tendra que poner en el buscador
+de cualquier navegador la siguiente direccion http://localhost:8080/ 
 
 Aclaraciones: El servidor web comenzara a operar en el puerto 8080 asi que debe estar vacio. Se puede utilizar **XXAMP** para ello.
  
