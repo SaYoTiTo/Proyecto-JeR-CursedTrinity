@@ -296,5 +296,7 @@ sentencia: **"java -jar CursedTrinity-0.0.1-SNAPSHOT.jar".**
   - Tras esto, el server se pondra en funcionamiento. Para llegar al juego y poder probar el chat se tendra que poner en el buscador
 de cualquier navegador la siguiente direccion http://localhost:8080/ 
 
+Para abrir el chat a lo largo del juego simplemente pulsa C y para cerrarlo ESC. Se guardara la conexion y los mensajes enviados. 
+
 Aclaraciones: El servidor web comenzara a operar en el puerto 8080 asi que debe estar vacio. Se puede utilizar **XXAMP** para ello.
  
