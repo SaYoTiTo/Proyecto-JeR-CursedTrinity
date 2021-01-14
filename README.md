@@ -282,7 +282,6 @@ Aqui enseñaremos las pantallas principales con el chat implementado en ellas. D
   ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799065730237988945/GameSceneSinChat.PNG)
   ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799065733190909982/GameSceneChat.PNG)
   
-  https://cdn.discordapp.com/attachments/766348457228238869/799065733190909982/GameSceneChat.PNG
   
   
 # Diagrama de clases y API REST
