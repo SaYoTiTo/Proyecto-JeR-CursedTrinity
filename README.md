@@ -229,17 +229,25 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
   
     - **Sala estandar**: Este modelo se repetirá en las siguientes salas solo que en las demás se añadiran otro tipo de elementos. En su interior se pueden encontrar enemigos que los jugadores tendrán que derrotar. Tanto en la esquina izquierda y derecha, tendremos la vida de los dos personajes jugables representados con corazones. Los cuales al ser golpeados poco a poco se vaciarán. 
     
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786316267782668368/SalaEstandar.PNG)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806009108016267304/SalaEstandar.PNG) 
     
     - **Sala con puzzle**: Esta sala se basa en el modelo estandar aunque en esta se encontrara un sencillo puzzle que se podra resolver con las mecancias basicas de los personajes.
     
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314573208617000/SalaPuzzle1.PNG)
-     ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314651620343808/SalaPuzzle2.PNG)
+    ![alt text](https://media.discordapp.net/attachments/766348457228238869/806010463472189456/unknown.png?width=725&height=546)
+     ![alt text](https://media.discordapp.net/attachments/766348457228238869/806011217327292416/unknown.png?width=723&height=546)
+     
+     - **Sala de combate**: Esta sala basada en el modelo estandar tendrá un número determinado de enemigos de diversa índole que deberán ser derrotados para avanzar.
+     
+     ![alt text](https://media.discordapp.net/attachments/766348457228238869/806009671441186866/unknown.png?width=725&height=546)
+     ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806011005183590400/unknown.png)
      
     - **Sala del Cofre**:Esta sala también se basa en el modelo estandar pero en esta los personajes encontraran un cofre con una pocion de vida.
     
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314673841635358/SalaTesoro1.PNG)
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314689075609720/SalaTesoro2.PNG)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806010660688363550/unknown.png)
+    
+    - **Sala de Jefe**:Sala final en la que los jugadores deberán enfrentarse a un enemigo más poderoso que los anteriores para concluir con el juego.
+    
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806011454783488020/unknown.png)
     
 #  Diagrama de navegación 
 Para mostrar mejor el transcurso de las diferentes pantallas del videojuego y a que pantalla se podria ir en cada una, se ha creado una diagrama de navegación para esta segunda fase del videojuego offline.
