@@ -213,17 +213,19 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
 
   - **Pantalla Menú Principal**: Esta sería la primera pantalla que se vería al empezar el juego. En ella veremos el título del juego con su botón *Jugar* que nos llevará directamente a la *Pantalla de Seleccion de Personaje*. 
 
-![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314513531666432/MenuPrincipal.PNG)
+![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806012461916094494/unknown.png)
 
   - **Pantalla Selección de Personaje:** En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Debido a que el juego por ahora es offline, solo se podrá jugar con dos de los personajes del juego: Arrow y Cauldron. Blade estará disponible en la siguiente fase ya que el grupo decidió que era más óptimo dejar solo dos jugadores en vez de tres en esta segunda fase. En esta pantalla, el jugador tendrá que pulsar uno de los personajes (tambien tiene la opción de moverse mediante las flechas y el boton de escape) y pasará a la pantalla del tutorial.
 
-![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314537992978462/SeleccionDePersonaje.PNG)
+![alt text](https://media.discordapp.net/attachments/766348457228238869/806012965370200074/unknown.png?width=745&height=546)
 
   - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
   
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786328560977051699/PantallaTutorial.png)
+  ![alt text](https://media.discordapp.net/attachments/766348457228238869/806012267350327316/unknown.png?width=726&height=546)
 
   - **Pantalla Configuracion**: En esta pantalla podremos modificar el sonido del juego mediante un slider en cualquier momento de la partida.
+  
+  ![alt text](https://media.discordapp.net/attachments/766348457228238869/806012688802906132/unknown.png?width=726&height=546)
   
   - **Pantallas In Game**: Ya que el juego se desarrolla en el interior de una mazmorra, hay diferentes tipos de salas en ella y, por lo tanto, diferentes pantallas *In Game*
   
