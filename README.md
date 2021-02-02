@@ -257,12 +257,16 @@ Para mostrar mejor el transcurso de las diferentes pantallas del videojuego y a 
  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786326873649971261/DiagramaDeFlujo.PNG)
 
 # Actualizaciones del diseño del juego
+ 
+De cara a arreglar los porblemas vistos en la entrega original, se optó por tratar de encapsular la construcción de las salas de la mazmorra lo máximo posible. Así se permite 
+que cada sala sea una escena, dando mayor libertad para la creación del escenario, mejorando el acabado final y el rendimiento.
 
-En esta segunda fase de la práctica, el equipo empezó de cero separándose el trabajo después de organizarlo en trello. Una parte del equipo se ocupó de la parte artística, es decir, los sprites de personajes y enemigos; los escenarios con todos los sprites que necesite la sala (cofre, palanca, puente); el interfaz tanto de los menús como del gameplay; la música original y los sonidos ambientales.
+Se han añadido elementos que ya estaban planteados pero que nunca llegaron a implementarse como nuevos tipos de enemigos, un tipo de puzzle más, un jefe final y recursos curativos.
 
-Todo ello fue creado mientras el equipo técnico programaba las mecánicas más importantes del juego, ya mencionadas en este documento, y el funcionamiento correcto de los menús, personajes, escenarios y enemigos del juego.
+Se ha tratado de mejorar la experiencia de usuario con un slider para regular el sonido, un nuevo HUD y retroalimentación de daño para jugadores y boss.
 
-Algún cambio no contemplado anteriormente, fue la incorporación de una pantalla tutorial para mostrar al jugador como funciona el juego. 
+En definitiva, se intentaron suplir las carencias presentes en la fase original y llevar las ideas olvidadas del proyecto a la vida, todo con el objetivo de que Cursed Trinity
+estuviera más cerca de poder ser considerado un juego completo.
 
-Todos los sprites y la musica del videojuego ha sido creado originalmente por el equipo. Lo unico no original son los snidos utilzados en el juego como pisadas o disparos. Los creadores originales son los siguientes: Momeka en Escenarios, XLIVE99 en Antorchas, braqoon en Sonidos, kretopi en Sonidos, CTCollab en Sonidos, DWOBoyle en Sonidos, falcospizaetus en Sonidos.
+Todos los sprites y la musica del videojuego ha sido creado originalmente por el equipo. Lo unico no original son los sonidos utilzados en el juego como pisadas o disparos. Los creadores originales son los siguientes: Momeka en Escenarios, XLIVE99 en Antorchas, braqoon en Sonidos, kretopi en Sonidos, CTCollab en Sonidos, DWOBoyle en Sonidos, falcospizaetus en Sonidos.
 
