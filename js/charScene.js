@@ -29,22 +29,22 @@ export default class CharScene extends Phaser.Scene{
         
         this.registry.set('3A1',false);
 		
-		this.registry.set('oA5',false);
-		this.registry.set('oB3',false);
-		this.registry.set('oB4',false);
-		this.registry.set('oB5',false);
-		this.registry.set('oB6',false);
-		this.registry.set('oC2',false);
-		this.registry.set('oC3',false);
-		this.registry.set('oC4',false);
-		this.registry.set('oC5',false);
-		this.registry.set('oD2',false);
-		this.registry.set('oD3',false);
-		this.registry.set('oD4',false);
-		this.registry.set('oD5',false);
-		this.registry.set('oE1',false);
-		this.registry.set('oE2',false);
-		this.registry.set('oE3',false);
+	this.registry.set('oA5',false);
+	this.registry.set('oB3',false);
+	this.registry.set('oB4',false);
+	this.registry.set('oB5',false);
+	this.registry.set('oB6',false);
+	this.registry.set('oC2',false);
+	this.registry.set('oC3',false);
+	this.registry.set('oC4',false);
+	this.registry.set('oC5',false);
+	this.registry.set('oD2',false);
+	this.registry.set('oD3',false);
+	this.registry.set('oD4',false);
+	this.registry.set('oD5',false);
+	this.registry.set('oE1',false);
+	this.registry.set('oE2',false);
+	this.registry.set('oE3',false);
         
         downKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
         leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
