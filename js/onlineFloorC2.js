@@ -1,6 +1,8 @@
 import {BaseGame} from './baseGame.js';
 import {game} from './game.js';
 
+WSconnection = new WebSocket('');
+
 var posX;
 var posY;
 var constanciaEscenas;
@@ -63,7 +65,9 @@ export default class OnlineFloorC2 extends BaseGame {
 			super.startOpenDoor(2);
             super.setHeroALifes(this.lifeA);
             super.setHeroCLifes(this.lifeC);
-        }    
+        } 
+
+        super.heroC.disableBody(true, true);
 
     }
     update(){
@@ -89,4 +93,20 @@ export default class OnlineFloorC2 extends BaseGame {
         }
 
     }
+}
+
+function updatePalancas(obj){
+    
+    //Palancas de Cauldron
+    this.registry.set('p1Cauldron', obj.p3);
+    this.registry.set('p2Cauldron', obj.p4);
+
+}
+
+WSconnection.onmessage = function(msg){
+    var obj = JSON.parse(msg.data);
+
+    if(obj.typePetition === 1)
+        //Updatear palancas
+        updatePalancas(obj);
 }

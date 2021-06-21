@@ -1,6 +1,8 @@
 import {BaseGame} from './baseGame.js';
 import {game} from './game.js';
 
+WSconnection = new WebSocket('');
+
 var posX;
 var posY;
 var constanciaEscenas;
@@ -64,7 +66,9 @@ export default class OnlineFloorA5 extends BaseGame {
             super.startOpenDoor(2);
             super.setHeroALifes(this.lifeA);
             super.setHeroCLifes(this.lifeC);
-        }    
+        }
+
+        super.heroA.disableBody(true, true);
 
     }
     update(){
@@ -81,4 +85,20 @@ export default class OnlineFloorA5 extends BaseGame {
                              { lifeA: super.getHeroALifes(), lifeC: super.getHeroCLifes(), arrows: super.getArrows(), exitX: 0.5, exitY: 1 });
         }
     }
+}
+
+function updatePalancas(obj){
+    
+    //Palancas de Arrow
+    this.registry.set('p1Arrow', obj.p1);
+    this.registry.set('p2Arrow', obj.p2);
+
+}
+
+WSconnection.onmessage = function(msg){
+    var obj = JSON.parse(msg.data);
+
+    if(obj.typePetition === 1)
+        //Updatear palancas
+        updatePalancas(obj);
 }

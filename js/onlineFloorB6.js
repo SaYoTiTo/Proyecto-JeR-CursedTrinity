@@ -1,6 +1,8 @@
 import {BaseGame} from './baseGame.js';
 import {game} from './game.js';
 
+WSconnection = new WebSocket('');
+
 var posX;
 var posY;
 var constanciaEscenas;
@@ -20,6 +22,7 @@ export default class OnlineFloorB6 extends BaseGame {
     }
 
     create(){
+
         this.cameras.main.fadeIn(250,0,0,0);
         
         super.setCurrentScene('OnlineFloorB6');
@@ -39,7 +42,7 @@ export default class OnlineFloorB6 extends BaseGame {
             
             super.setHeroALifes(this.lifeA);
             super.setHeroCLifes(this.lifeC);
-            
+
         }else{
             if(this.exitX > 0.5){
                 super.setHeroAx(75, 140);
@@ -64,6 +67,10 @@ export default class OnlineFloorB6 extends BaseGame {
             super.setHeroCLifes(this.lifeC);
         }    
 
+        //Como somos Cauldron, desactivamos a Arrow
+        super.heroA.disableBody(true, true);
+        this.palanca = this.physics.add.sprite(210, 160, 'blade', 0);
+        super.physics.add.collider(super.heroc, this.palanca, modificarPalanca, null, this);
     }
     update(){
         super.update();           
@@ -78,6 +85,36 @@ export default class OnlineFloorB6 extends BaseGame {
             this.scene.start('OnlineFloorB5', 
                              { lifeA: super.getHeroALifes(), lifeC: super.getHeroCLifes(), arrows: super.getArrows(), exitX: 0, exitY: 0.5 });
 		}
-
     }
+}
+
+function modificarPalanca(player, palanca){
+
+    this.registry.set('p1Cauldron', true);
+
+    //Envio el update de palanca
+    var obj={
+        id:1,
+        typePetition:1,
+        p1:this.registry.get('p1Cauldron'),
+        p2:this.registry.get('p2Cauldron')
+    }
+
+    WSconnection.send(JSON.stringify(obj));
+}
+
+function updatePalancas(obj){
+    
+    //Palancas de Arrow
+    this.registry.set('p1Arrow', obj.p1);
+    this.registry.set('p2Arrow', obj.p2);
+
+}
+
+WSconnection.onmessage = function(msg){
+    var obj = JSON.parse(msg.data);
+
+    if(obj.typePetition === 1)
+        //Updatear palancas
+        updatePalancas(obj);
 }

@@ -1,10 +1,13 @@
 import {BaseGame} from './baseGame.js';
 import {game} from './game.js';
 
+WSconnection = new WebSocket('');
+
 var posX;
 var posY;
 var constanciaEscenas;
 
+var opened;
 
 export default class OnlineFloorD2 extends BaseGame {
     constructor(){
@@ -88,7 +91,17 @@ export default class OnlineFloorD2 extends BaseGame {
 			super.startOpenDoor(2);
             super.setHeroALifes(this.lifeA);
             super.setHeroCLifes(this.lifeC);
-        }    
+        }
+        
+        super.heroC.disableBody(true, true);
+
+        if(this.registry.get('p2Cauldron') === false){
+            opened = false;
+            super.closeDoor(0);
+        }else{
+            opened = true;
+            super.openDoor(0);
+        }
 
     }
     update(){
@@ -112,5 +125,27 @@ export default class OnlineFloorD2 extends BaseGame {
             this.scene.start('OnlineFloorE2', 
                              { lifeA: super.getHeroALifes(), lifeC: super.getHeroCLifes(), arrows: super.getArrows(), exitX: 0.5, exitY: 1 });
         }
+
+        //Comprobamos las puertas
+        if(opened === false){
+            if(this.registry.get('p2Cauldron') === true)
+                super.openDoor(0);
+        }
     }
+}
+
+function updatePalancas(obj){
+    
+    //Palancas de Cauldron
+    this.registry.set('p1Cauldron', obj.p3);
+    this.registry.set('p2Cauldron', obj.p4);
+
+}
+
+WSconnection.onmessage = function(msg){
+    var obj = JSON.parse(msg.data);
+
+    if(obj.typePetition === 1)
+        //Updatear palancas
+        updatePalancas(obj);
 }

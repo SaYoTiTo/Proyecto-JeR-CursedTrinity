@@ -1,6 +1,8 @@
 import {BaseGame} from './baseGame.js';
 import {game} from './game.js';
 
+WSconnection = new WebSocket('');
+
 var posX;
 var posY;
 var constanciaEscenas;
@@ -64,6 +66,10 @@ export default class OnlineFloorD5 extends BaseGame {
             super.setHeroCLifes(this.lifeC);
         }    
 
+        //Como somos Cauldron, desactivamos a Arrow
+        super.heroA.disableBody(true, true);
+        this.palanca = this.physics.add.sprite(210, 160, 'blade', 0);
+        this.physics.add.collider(super.heroc, this.palanca, modificarPalanca, null, this);
     }
     update(){
         super.update();           
@@ -80,4 +86,34 @@ export default class OnlineFloorD5 extends BaseGame {
 		}
 
     }
+}
+
+function modificarPalanca(player, palanca){
+
+    this.registry.set('p2Cauldron', true);
+    //Envio el update de palanca
+    var obj={
+        id:1,
+        typePetition:1,
+        p1:this.registry.get('p1Cauldron'),
+        p2:this.registry.get('p2Cauldron')
+    }
+    
+    WSconnection.send(JSON.stringify(obj));
+}
+
+function updatePalancas(obj){
+
+//Palancas de Arrow
+this.registry.set('p1Arrow', obj.p1);
+this.registry.set('p2Arrow', obj.p2);
+
+}
+
+WSconnection.onmessage = function(msg){
+var obj = JSON.parse(msg.data);
+
+if(obj.typePetition === 1)
+    //Updatear palancas
+    updatePalancas(obj);
 }

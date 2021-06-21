@@ -1,10 +1,11 @@
 import {BaseGame} from './baseGame.js';
 import {game} from './game.js';
 
+WSconnection = new WebSocket('');
+
 var posX;
 var posY;
 var constanciaEscenas;
-
 
 export default class OnlineFloorC4 extends BaseGame {
     constructor(){
@@ -63,8 +64,9 @@ export default class OnlineFloorC4 extends BaseGame {
 			super.startOpenDoor(3);
             super.setHeroALifes(this.lifeA);
             super.setHeroCLifes(this.lifeC);
-        }    
+        }   
 
+        super.heroA.disableBody(true, true);
     }
     update(){
         super.update();           
@@ -87,6 +89,20 @@ export default class OnlineFloorC4 extends BaseGame {
             this.scene.start('OnlineFloorC3', 
                              { lifeA: super.getHeroALifes(), lifeC: super.getHeroCLifes(), arrows: super.getArrows(), exitX: 0, exitY: 0.5 });
 		}
-
     }
+}
+function updatePalancas(obj){
+    
+    //Palancas de Arrow
+    this.registry.set('p1Arrow', obj.p1);
+    this.registry.set('p2Arrow', obj.p2);
+
+}
+
+WSconnection.onmessage = function(msg){
+    var obj = JSON.parse(msg.data);
+
+    if(obj.typePetition === 1)
+        //Updatear palancas
+        updatePalancas(obj);
 }

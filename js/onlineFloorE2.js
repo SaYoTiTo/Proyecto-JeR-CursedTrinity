@@ -1,6 +1,8 @@
 import {BaseGame} from './baseGame.js';
 import {game} from './game.js';
 
+WSconnection = new WebSocket('');
+
 var posX;
 var posY;
 var constanciaEscenas;
@@ -64,8 +66,17 @@ export default class OnlineFloorE2 extends BaseGame {
 			super.startOpenDoor(3);
             super.setHeroALifes(this.lifeA);
             super.setHeroCLifes(this.lifeC);
-        }    
+        }   
 
+        super.heroC.disableBody(true, true);
+
+        if(this.registry.get('p2Cauldron') === false){
+            opened = false;
+            super.closeDoor(3);
+        }else{
+            opened = true;
+            super.openDoor(3);
+        }
     }
     update(){
         super.update();           
@@ -96,5 +107,26 @@ export default class OnlineFloorE2 extends BaseGame {
             this.scene.start('OnlineFloorD2', 
                              { lifeA: super.getHeroALifes(), lifeC: super.getHeroCLifes(), arrows: super.getArrows(), exitX: 0.5, exitY: 0 });
         }
+
+        if(opened === false){
+            if(this.registry.get('p2Cauldron') === true)
+                super.openDoor(3);
+        }
     }
+}
+
+function updatePalancas(obj){
+    
+    //Palancas de Arrow
+    this.registry.set('p1Cauldron', obj.p3);
+    this.registry.set('p2Cauldron', obj.p4);
+
+}
+
+WSconnection.onmessage = function(msg){
+    var obj = JSON.parse(msg.data);
+
+    if(obj.typePetition === 1)
+        //Updatear palancas
+        updatePalancas(obj);
 }
