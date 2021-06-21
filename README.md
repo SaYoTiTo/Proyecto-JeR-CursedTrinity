@@ -152,7 +152,8 @@ En este diagrama de estados se muestran todas las pantallas que se podrán ver a
 
  - Menú principal
     - Botón jugar: Al pulsarlo lleva a la pantalla de Selección de Partida.
-    - Botón salir: al pulsarlo nos lleva de vuelta al Sistema Operativo.
+    - Botón salir: Al pulsarlo nos lleva de vuelta al Sistema Operativo.
+    - Botón config: Al pulsarlo nos llevara a la pantalla de Configuración
 
   - Selección de Partida
     - Botón Crear Sesión: Al pulsarlo lleva a la pantalla de Selección de personaje creando nuestra propia partida.
@@ -212,31 +213,43 @@ Tras realizar el GDD del videojuego el equipo de desarrollo comenzó en el traba
 
   - **Pantalla Menú Principal**: Esta sería la primera pantalla que se vería al empezar el juego. En ella veremos el título del juego con su botón *Jugar* que nos llevará directamente a la *Pantalla de Seleccion de Personaje*. 
 
-![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314513531666432/MenuPrincipal.PNG)
+![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806012461916094494/unknown.png)
 
-  - **Pantalla Selección de Personaje:** En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Debido a que el juego por ahora es offline, solo se podrá jugar con dos de los personajes del juego: Arrow y Cauldron. Blade estará disponible en la siguiente fase ya que el grupo decidió que era más óptimo dejar solo dos jugadores en vez de tres en esta segunda fase. En esta pantalla, el jugador tendrá que pulsar uno de los personajes y pasará a la pantalla del tutorial.
+  - **Pantalla Selección de Personaje:** En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Debido a que el juego por ahora es offline, solo se podrá jugar con dos de los personajes del juego: Arrow y Cauldron. Blade estará disponible en la siguiente fase ya que el grupo decidió que era más óptimo dejar solo dos jugadores en vez de tres en esta segunda fase. En esta pantalla, el jugador tendrá que pulsar uno de los personajes (tambien tiene la opción de moverse mediante las flechas y el boton de escape) y pasará a la pantalla del tutorial.
 
-![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314537992978462/SeleccionDePersonaje.PNG)
+![alt text](https://media.discordapp.net/attachments/766348457228238869/806012965370200074/unknown.png?width=745&height=546)
 
   - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente.
   
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786328560977051699/PantallaTutorial.png)
+  ![alt text](https://media.discordapp.net/attachments/766348457228238869/806012267350327316/unknown.png?width=726&height=546)
 
+  - **Pantalla Configuracion**: En esta pantalla podremos modificar el sonido del juego mediante un slider en cualquier momento de la partida.
+  
+  ![alt text](https://media.discordapp.net/attachments/766348457228238869/806012688802906132/unknown.png?width=726&height=546)
+  
   - **Pantallas In Game**: Ya que el juego se desarrolla en el interior de una mazmorra, hay diferentes tipos de salas en ella y, por lo tanto, diferentes pantallas *In Game*
   
     - **Sala estandar**: Este modelo se repetirá en las siguientes salas solo que en las demás se añadiran otro tipo de elementos. En su interior se pueden encontrar enemigos que los jugadores tendrán que derrotar. Tanto en la esquina izquierda y derecha, tendremos la vida de los dos personajes jugables representados con corazones. Los cuales al ser golpeados poco a poco se vaciarán. 
     
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786316267782668368/SalaEstandar.PNG)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806009108016267304/SalaEstandar.PNG) 
     
     - **Sala con puzzle**: Esta sala se basa en el modelo estandar aunque en esta se encontrara un sencillo puzzle que se podra resolver con las mecancias basicas de los personajes.
     
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314573208617000/SalaPuzzle1.PNG)
-     ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314651620343808/SalaPuzzle2.PNG)
+    ![alt text](https://media.discordapp.net/attachments/766348457228238869/806010463472189456/unknown.png?width=725&height=546)
+     ![alt text](https://media.discordapp.net/attachments/766348457228238869/806011217327292416/unknown.png?width=723&height=546)
+     
+     - **Sala de combate**: Esta sala basada en el modelo estandar tendrá un número determinado de enemigos de diversa índole que deberán ser derrotados para avanzar.
+     
+     ![alt text](https://media.discordapp.net/attachments/766348457228238869/806009671441186866/unknown.png?width=725&height=546)
+     ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806011005183590400/unknown.png)
      
     - **Sala del Cofre**:Esta sala también se basa en el modelo estandar pero en esta los personajes encontraran un cofre con una pocion de vida.
     
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314673841635358/SalaTesoro1.PNG)
-    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786314689075609720/SalaTesoro2.PNG)
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806010660688363550/unknown.png)
+    
+    - **Sala de Jefe**:Sala final en la que los jugadores deberán enfrentarse a un enemigo más poderoso que los anteriores para concluir con el juego.
+    
+    ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/806011454783488020/unknown.png)
     
 #  Diagrama de navegación 
 Para mostrar mejor el transcurso de las diferentes pantallas del videojuego y a que pantalla se podria ir en cada una, se ha creado una diagrama de navegación para esta segunda fase del videojuego offline.
@@ -244,65 +257,16 @@ Para mostrar mejor el transcurso de las diferentes pantallas del videojuego y a 
  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/786326873649971261/DiagramaDeFlujo.PNG)
 
 # Actualizaciones del diseño del juego
-
-En esta segunda fase de la práctica, el equipo empezó de cero separándose el trabajo después de organizarlo en trello. Una parte del equipo se ocupó de la parte artística, es decir, los sprites de personajes y enemigos; los escenarios con todos los sprites que necesite la sala (cofre, palanca, puente); el interfaz tanto de los menús como del gameplay; la música original y los sonidos ambientales.
-
-Todo ello fue creado mientras el equipo técnico programaba las mecánicas más importantes del juego, ya mencionadas en este documento, y el funcionamiento correcto de los menús, personajes, escenarios y enemigos del juego.
-
-Algún cambio no contemplado anteriormente, fue la incorporación de una pantalla tutorial para mostrar al jugador como funciona el juego. 
-
-Todos los sprites y la musica del videojuego ha sido creado originalmente por el equipo. Lo unico no original son los snidos utilzados en el juego como pisadas o disparos. Los creadores originales son los siguientes: Momeka en Escenarios, XLIVE99 en Antorchas, braqoon en Sonidos, kretopi en Sonidos, CTCollab en Sonidos, DWOBoyle en Sonidos, falcospizaetus en Sonidos.
-
-# FASE 3
-
-Después de completar las bases del juego el equipo de desarrollo comenzo a trabajar en el chat, empezando así la fase 3. En esta sección añadiremos las diferentes actualizaciones que se han realizado durante esta fase.
-
-# Navegación
-
-Aqui enseñaremos las pantallas principales con el chat implementado en ellas. Dabido a que la navegacion por las pantallas no ha cambiado, no pondremos de nuevo el diagrama de navegacion creado en la fase 2.
-
-  - **Pantalla Menú Principal**: Esta sería la primera pantalla que se vería al empezar el juego con el chat en la parte superior de la pantalla. 
-
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799064885404106772/MenuPrincipalSinChat.PNG)
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799064894883889162/MenuPrincipalChat.PNG)
-
-  - **Pantalla Selección de Personaje:** En esta pantalla se puede observar a los diferentes personajes que se podrán jugar. Aunque todavia no se puede elegir realmente ya que el juego sigue siendo offline; aunque podemos hablar en cualquier momento con cualquier persona en el chat.
-
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799066265360400427/SeleccionSinChat.PNG)
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799066102692708393/SeleccionChat.PNG)
-
-
-  - **Pantalla Tutorial**:  En esta pantalla veremos hasta que el jugador pulse en cualquiera parte del canvas un recordatorio de los controles en el juego para que sea mucho más sencillo hacerse con ellos y los jugadores puedan ponerse a jugar directamente; junto con el chat en la parte superior.
-  
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799065404038840340/ControlSinChat.PNG)
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799065406610079744/ControlChat.PNG)
-
-  - **Pantallas In Game**: Este es un ejemplo de las salas en las que nos moveremos por la mazmorra junto con el chat disponible arriba a la izquierda.
-    
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799065730237988945/GameSceneSinChat.PNG)
-  ![alt text](https://cdn.discordapp.com/attachments/766348457228238869/799065733190909982/GameSceneChat.PNG)
-  
-  
-  
-# Diagrama de clases y API REST
-
-En este apartado se puede observar cuales han sido las clases usadas y como se relacionan entre sí las mismas.
-
-  ![alt text](https://cdn.discordapp.com/attachments/503134276439769088/798867225049301022/unknown.png)
-    
-    
- # Instrucciones precisas para ejecutar la aplicación
- Aqui vienen los pasos a seguir para hacer funcionar el chat implementado en el juego Cursed Trinity de Juegos en Red.
  
-  - Para empezar se debe encender la consola de comandos, es decir, el cmd y buscar mediante la sentencia "cd" la carpeta
-**target**, donde se encuentra el .jar.
+De cara a arreglar los porblemas vistos en la entrega original, se optó por tratar de encapsular la construcción de las salas de la mazmorra lo máximo posible. Así se permite 
+que cada sala sea una escena, dando mayor libertad para la creación del escenario, mejorando el acabado final y el rendimiento.
 
-  - En cuanto estemos ya dentro de esta carpeta, mediante el cmd se tendra que poner a correr el servidor mediante la siguiente
-sentencia: **"java -jar CursedTrinity-0.0.1-SNAPSHOT.jar".**
-  - Tras esto, el server se pondra en funcionamiento. Para llegar al juego y poder probar el chat se tendra que poner en el buscador
-de cualquier navegador la siguiente direccion http://localhost:8080/ 
+Se han añadido elementos que ya estaban planteados pero que nunca llegaron a implementarse como nuevos tipos de enemigos, un tipo de puzzle más, un jefe final y recursos curativos.
 
-Para abrir el chat a lo largo del juego simplemente pulsa C y para cerrarlo ESC. Se guardara la conexion y los mensajes enviados. 
+Se ha tratado de mejorar la experiencia de usuario con un slider para regular el sonido, un nuevo HUD y retroalimentación de daño para jugadores y boss.
 
-Aclaraciones: El servidor web comenzara a operar en el puerto 8080 asi que debe estar vacio. Se puede utilizar **XXAMP** para ello.
- 
+En definitiva, se intentaron suplir las carencias presentes en la fase original y llevar las ideas olvidadas del proyecto a la vida, todo con el objetivo de que Cursed Trinity
+estuviera más cerca de poder ser considerado un juego completo.
+
+Todos los sprites y la musica del videojuego ha sido creado originalmente por el equipo. Lo unico no original son los sonidos utilzados en el juego como pisadas o disparos. Los creadores originales son los siguientes: Momeka en Escenarios, XLIVE99 en Antorchas, braqoon en Sonidos, kretopi en Sonidos, CTCollab en Sonidos, DWOBoyle en Sonidos, falcospizaetus en Sonidos.
+
