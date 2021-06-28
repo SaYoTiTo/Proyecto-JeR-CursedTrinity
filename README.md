@@ -307,7 +307,31 @@ Para abrir el chat a lo largo del juego simplemente pulsa C y para cerrarlo ESC.
 Aclaraciones: El servidor web comenzara a operar en el puerto 8080 asi que debe estar vacio. Se puede utilizar **XXAMP** para ello.
  
 # FASE 4
-Para realizar la fase 4, se ha tenido que implementar un protocolo de WebSockets que conecte a los dos jugadores que podran jugar a la vez a Cursed Trinity. 
+Para realizar la fase 4, se ha tenido que implementar un protocolo de WebSockets (cuya documentación puede encontrarse en el siguiente enlace: https://developer.mozilla.org/es/docs/Web/API/WebSockets_API) que conecte a los dos jugadores que podran jugar a la vez a Cursed Trinity. 
+
+La comunicación entre jugadores funciona de la siguiente manera. Desde los archivos del juego se envían los diferentes objetos JSON como string
+(mediante la función stringify) mediante métodos send() de la sesión de WebSockets que se está usando. Todo estos objetos tienen un elemento
+typePetition que determina que tipo de mensaje es el que se está enviando al servidor. En el servidor los objetos recuperan el formato JSON
+con el método getPayLoad() y allí se comprueba de que tipo es el mensaje.
+
+Estos mensajes pueden ser:
+
+  -De tipo 0: que se ejecutan al inicio como primera conexión para comprobar que el paso de mensaje funciona correctamente.
+  
+  -De tipo 1: que comprueba quien ha enviado el mensaje y en función de eso cambia los valores de la clase Dungeon, de esta manera sabremos
+    que palancas se han activado en el juego y así posteriormente devolverlas para que las puertas cerradas del otro jugador se abran.
+    
+  -De tipo 2: envía las posiciones de un jugador al otro para actualizar sus posiciones en el otro lado y así poder verse mutuamente.
+  
+  -De tipo 3: que comprueba que personaje se ha elegido para bloquearlo y que no se repitan.
+  
+  -De tipo 5: que cuando es devuelto indica a los jugadores que el juego se ha terminado para que pasen a la escena de créditos.
+  
+  -De tipo 10: que elimina los jugadores que envían el mensaje.
+  
+ Cada mensaje entra en los diferentes cases del switch case, y ahí se le introducen los valores de vuelta a un responseNode, que antes de 
+ ser envíado al cliente es convertido a string con un toString().
+
 
 # Protocolo
 
