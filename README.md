@@ -340,3 +340,5 @@ El protocolo usado para la comunicación entre clientes y servidores es WebSocke
 ![WebSocketsFixed](https://user-images.githubusercontent.com/61837624/123696851-83842b00-d85c-11eb-8a62-1bb8fdca2740.png)
 
 # Video
+El enlace a YouTube del vídeo que muestra el funcionamiento del juego con dos jugadores simultáneos es el siguiente:
+https://www.youtube.com/watch?v=PfjN-h9wFP4
