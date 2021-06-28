@@ -307,7 +307,7 @@ Para abrir el chat a lo largo del juego simplemente pulsa C y para cerrarlo ESC.
 Aclaraciones: El servidor web comenzara a operar en el puerto 8080 asi que debe estar vacio. Se puede utilizar **XXAMP** para ello.
  
 # FASE 4
-Para realizar la fase 4, se ha tenido que implementar un protocolo de WebSockets (cuya documentación puede encontrarse en el siguiente enlace: https://developer.mozilla.org/es/docs/Web/API/WebSockets_API) que conecte a los dos jugadores que podran jugar a la vez a Cursed Trinity. 
+Para realizar la fase 4, se ha tenido que implementar un protocolo de WebSockets que conecte a los dos jugadores que podran jugar a la vez a Cursed Trinity. 
 
 La comunicación entre jugadores funciona de la siguiente manera. Desde los archivos del juego se envían los diferentes objetos JSON como string
 (mediante la función stringify) mediante métodos send() de la sesión de WebSockets que se está usando. Todo estos objetos tienen un elemento
@@ -334,7 +334,7 @@ Estos mensajes pueden ser:
 
 
 # Protocolo
-
+El protocolo usado para la comunicación entre clientes y servidores es WebSockets, cuya documentación puede encontrarse en el siguiente enlace: https://developer.mozilla.org/es/docs/Web/API/WebSockets_API.
 
 # Diagrama de clases
 
