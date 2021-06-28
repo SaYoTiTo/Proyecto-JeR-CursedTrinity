@@ -111,3 +111,5 @@ class Cauldron extends Heroe{
         this.num_hechizos = 0;
     }
 }
+
+

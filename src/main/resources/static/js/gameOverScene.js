@@ -1,10 +1,13 @@
+var music;
 export default class GameOverScene extends Phaser.Scene{
     
     constructor(){
             super({ key:'GameOverScene' });
         };
-            
+    
     create(){
+        this.cameras.main.fadeIn(1000,0,0,0);
+        
         this.bg = this.physics.add.sprite(210,160,'gameOverBg');
         this.play = this.physics.add.sprite(220,280,'botonVolverNuevo').setScale(0.6).refreshBody();
         this.exit = this.physics.add.sprite(30, 300, 'botonSalirNuevo').setScale(0.3).refreshBody();
@@ -14,9 +17,9 @@ export default class GameOverScene extends Phaser.Scene{
         
         this.play.setInteractive();
         this.exit.setInteractive();
-        
-        //The chat
-        this.input.keyboard.on('keydown-C', chat, this);
+
+		//The chat
+		this.input.keyboard.on('keydown-C', chat, this);
     };
         
     update(){

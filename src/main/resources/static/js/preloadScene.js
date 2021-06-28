@@ -23,18 +23,30 @@ export default class PreloadScene extends Phaser.Scene{
 
          //Preload del menu
         this.load.image('menuBg', 'assets/panTit.png');
-        this.load.image('botonJugar', 'assets/BotonJugar.png');
-	    this.load.image('botonJugarNuevo', 'assets/BotonJugarNuevo.png');
-        this.load.image('botonSalir', 'assets/BotonSalir.png');
-        this.load.image('botonSalirNuevo', 'assets/BotonSalirNuevo.png');
-
+        this.load.image('botonJugar', 'assets/BotonPlay.png');
+	    this.load.image('botonJugarNuevo', 'assets/BotonPlay.png');
+        this.load.image('botonSalir', 'assets/BotonExit.png');
+        this.load.image('botonSalirNuevo', 'assets/BotonExit.png');
+ 		this.load.image('botonOnline', 'assets/Boton_Online.png');
+	 	this.load.image('botonOffline', 'assets/Boton_Offline.png');
+        
+        //Preload de ajustes
+        this.load.image('botonConfig', 'assets/BotonConfig.png');
+        this.load.image('fondoVacio', 'assets/FondoVacio.png');
+        this.load.image('volumeText', 'assets/Volume.png');
+        //Slider
+        var url;
+        url = 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexsliderplugin.min.js';
+        this.load.plugin('rexsliderplugin', url, true);
+        
         //Preload del charSelScene
         this.load.image('charBg', 'assets/panChar.png');
         this.load.image('arrow', 'assets/arrow.png');
         this.load.image('cauldron', 'assets/cauldron.png');
         this.load.image('blade', 'assets/blade.png');
-        this.load.image('botonVolver', 'assets/BotonVolver.png');
-        this.load.image('botonVolverNuevo', 'assets/BotonVolverNuevo.png');
+		this.load.image('darkBlade', 'assets/darkBlade.png');
+        this.load.image('botonVolver', 'assets/ReturnBOTON.png');
+        this.load.image('botonVolverNuevo', 'assets/ReturnBOTON.png');
 
         //Preload de los controles
         this.load.image('controlsBg', 'assets/controls.png');
@@ -48,7 +60,14 @@ export default class PreloadScene extends Phaser.Scene{
         //Preload del pause
         this.load.image('pauseBg', 'assets/pause.png');
         
+        //Preload de las transiciones
+        this.load.image('floor1', 'assets/Floor1.png');
+        this.load.image('floor2', 'assets/Floor2.png');
+        this.load.image('floor3', 'assets/Floor3.png');
+        
         //Preload del gameScene
+		this.load.image('dummy', 'assets/SaveBlade.png');
+
         this.load.spritesheet('heroA', 'assets/ArrowArmlessSpritesheet.png', {
             frameWidth: 30,
             frameHeight: 35,
@@ -73,11 +92,19 @@ export default class PreloadScene extends Phaser.Scene{
             frameWidth: 53,
             frameHeight: 21,
         });
+        this.load.spritesheet('llamasF', 'assets/LlamaFatuaSpritesheet.png',{
+            frameWidth: 22,
+            frameHeight: 11,
+        });
         this.load.spritesheet('spider', 'assets/SpriteArañaDeCristal.png',{
             frameWidth: 16,
             frameHeight: 10,    
         });
         this.load.spritesheet('palanca', 'assets/Palanca.png',{
+            frameWidth: 22,
+            frameHeight: 18,
+        });
+        this.load.spritesheet('palancaPuerta', 'assets/PalancaPuertas.png',{
             frameWidth: 22,
             frameHeight: 18,
         });
@@ -105,6 +132,18 @@ export default class PreloadScene extends Phaser.Scene{
             frameWidth: 22,
             frameHeight: 22,
         });
+        this.load.spritesheet('centinel', 'assets/VigilanteArtificiaSpritesheetl.png',{
+            frameWidth: 29,
+            frameHeight: 24,
+        });
+        this.load.spritesheet('devil', 'assets/DiabloLloronSpritesheet.png',{
+            frameWidth: 22,
+            frameHeight: 28,
+        });
+        this.load.spritesheet('theDeath', 'assets/LaMuerteSpritesheet.png',{
+            frameWidth: 48,
+            frameHeight: 52,
+        });
 
         this.load.image('colliderH', 'assets/ColliderMuroHorizontal.png'); 
         this.load.image('colliderV', 'assets/ColliderMuroVertical.png');
@@ -112,12 +151,20 @@ export default class PreloadScene extends Phaser.Scene{
         this.load.image('colliderRemovible', 'assets/ColliderRemovible.png');
         this.load.image('spiderWeb', 'assets/Telaraña.png');
         this.load.image('top', 'assets/Darkness.png');
-        this.load.image('flechas', 'assets/Flecha.png');           
+        this.load.image('flechas', 'assets/Flecha.png');
+        this.load.image('lagrimas', 'assets/LagrimaDiabloLLoron.png');
         this.load.image('niebla', 'assets/Niebla.jpg');
+        this.load.image('miniHeart', 'assets/miniCorazonCompleto.png');
+        this.load.image('pRock', 'assets/PuzzleRock.png');
+        this.load.image('nRock', 'assets/NormalRock.png');
+        this.load.image('rHand', 'assets/RightHand.png');
+        this.load.image('lHand', 'assets/LeftHand.png');
 
         //Preload del HUD
-        this.load.image('fullHeart', 'assets/Corazon_lleno.png');
-        this.load.image('emptyHeart', 'assets/Corazon_vacia.png');
+        this.load.image('fullHeart', 'assets/Corazon_lleno-sheet.png');
+        this.load.image('emptyHeart', 'assets/Corazon_vacia-sheet.png');
+        this.load.image('arrowHUD', 'assets/ArrowHUD.png');
+        this.load.image('cauldronHUD', 'assets/CauldronHUD.png');
         this.load.image('pauseBg', 'assets/pause.png');
 
         //Barra de carga
@@ -145,6 +192,10 @@ export default class PreloadScene extends Phaser.Scene{
         ]);
     }
     
+    create(){
+        this.registry.set('vol', 1);
+    }
+    
     updateBar(percentage) {
 	this.newGraphics.clear();
     this.newGraphics.fillStyle(0x3587e2, 1);
@@ -152,7 +203,7 @@ export default class PreloadScene extends Phaser.Scene{
 		
     percentage = percentage * 100;
     this.loadingText.setText("Loading: " + percentage.toFixed(2) + "%");
-    console.log("P:" + percentage);
+    console.log("P:" + percentage); 
 }
 
     complete() {

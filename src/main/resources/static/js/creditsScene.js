@@ -5,6 +5,7 @@ export default class CreditsScene extends Phaser.Scene{
         };
             
     create(){
+        this.cameras.main.fadeIn(1000,0,0,0);
         
         this.credits = this.add.video(210,160,'credits');
         this.credits.play(false);

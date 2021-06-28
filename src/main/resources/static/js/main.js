@@ -50,7 +50,7 @@ class State {
         width: 400,
         height: 300,
         pixelArt: true,
-        zoom: 3,
+        zoom: 2,
         physics: {
             default: 'arcade'
         },

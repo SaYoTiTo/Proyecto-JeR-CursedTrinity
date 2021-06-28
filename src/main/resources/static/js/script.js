@@ -4,6 +4,8 @@ var idPJ;
 var timer;
 var connection = false;
 
+var WSconnection = new WebSocket('ws://'+ location.host +'/online');
+
 // F U N C I O N E S _ A J A X //
 
 
