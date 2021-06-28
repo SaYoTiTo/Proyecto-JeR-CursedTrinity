@@ -306,3 +306,13 @@ Para abrir el chat a lo largo del juego simplemente pulsa C y para cerrarlo ESC.
 
 Aclaraciones: El servidor web comenzara a operar en el puerto 8080 asi que debe estar vacio. Se puede utilizar **XXAMP** para ello.
  
+# FASE 4
+Para realizar la fase 4, se ha tenido que implementar un protocolo de WebSockets que conecte a los dos jugadores que podran jugar a la vez a Cursed Trinity. 
+
+# Protocolo
+
+
+# Diagrama de clases
+
+
+# Video
