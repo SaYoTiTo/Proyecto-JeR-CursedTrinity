@@ -11,6 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>CursedTrinity</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>CursedTrinity</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -28,6 +29,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		  	<groupId>org.springframework.boot</groupId>            
+  			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
 	</dependencies>
 
