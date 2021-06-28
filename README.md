@@ -337,6 +337,6 @@ Estos mensajes pueden ser:
 El protocolo usado para la comunicación entre clientes y servidores es WebSockets, cuya documentación puede encontrarse en el siguiente enlace: https://developer.mozilla.org/es/docs/Web/API/WebSockets_API.
 
 # Diagrama de clases
-
+![WenSockets](https://user-images.githubusercontent.com/61837624/123696696-4e77d880-d85c-11eb-9186-69f54d0d43fd.png)
 
 # Video
